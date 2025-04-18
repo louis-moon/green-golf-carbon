@@ -40,12 +40,12 @@ export default function TeamSection() {
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {team.map((member, index) => (
             <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow">
-              <div className="relative h-64 w-full">
+              <div className="relative h-64 w-full flex justify-center items-center"> {/* Added flex and centering */}
                 <Image
                   src={member.image || "/placeholder.svg"}
                   alt={member.name}
-                  width={300}  // Specify width
-                  height={300} // Specify height
+                  width={200}  // Specify width
+                  height={200} // Specify height
                   className="object-cover rounded-t-lg"
                 />
               </div>
