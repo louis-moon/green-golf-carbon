@@ -9,21 +9,21 @@ export default function TeamSection() {
       title: "CEO & Co-Inventor",
       bio: "Dartmouth College, BA Quant. Social Science. Former Goldman Sachs Financial Analyst.",
       email: "Brian@vadoselabs.com",
-      image: "/brian.png?height=200&width=200",
+      image: "/brian.png",
     },
     {
       name: "Mukul Sharma",
       title: "CTO & Co-Inventor",
       bio: "Dartmouth College, Professor of Earth Sciences. Guggenheim Fellow.",
       email: "Mukul.Sharma@dartmouth.edu",
-      image: "/mukul.png?height=200&width=200",
+      image: "/mukul.png",
     },
     {
       name: "Louis Moon",
       title: "Chief of Staff",
       bio: "Yale University, BS Statistics & Data Science. Tsai City Accelerator Alumnus, Product Manager.",
       email: "Louis@vadoselabs.com",
-      image: "/louis.png?height=200&width=200",
+      image: "/louis.png",
     },
   ]
 
@@ -44,7 +44,8 @@ export default function TeamSection() {
                 <Image
                   src={member.image || "/placeholder.svg"}
                   alt={member.name}
-                  fill
+                  width={200}  // Specify width
+                  height={200} // Specify height
                   className="object-cover rounded-t-lg"
                 />
               </div>
