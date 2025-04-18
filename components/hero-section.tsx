@@ -41,9 +41,9 @@ export default function HeroSection() {
             </Button>
           </div>
         </div>
-        <div className="relative w-full max-w-5xl h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-2xl">
+        <div className="ml-2 h-5 w-5">
           <Image
-            src="/placeholder.svg?height=800&width=1200"
+            src="/cover.jpg?height=800&width=1200"
             alt="Enhanced turf with Green Golf Carbon technology"
             fill
             className="object-cover"
