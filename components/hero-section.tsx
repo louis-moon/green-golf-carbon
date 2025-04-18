@@ -20,7 +20,7 @@ export default function HeroSection() {
             Improving Soil Quality & Capturing Atmospheric CO<sub>2</sub>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-emerald-100">
-            Vadose Labs transforms golf courses and managed turf into carbon sinks through innovative basalt-enhanced
+            Green Golf Carbon transforms golf courses and managed turf into carbon sinks through innovative basalt-enhanced
             sand technology.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -44,7 +44,7 @@ export default function HeroSection() {
         <div className="relative w-full max-w-5xl h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-2xl">
           <Image
             src="/placeholder.svg?height=800&width=1200"
-            alt="Enhanced turf with Vadose Labs technology"
+            alt="Enhanced turf with Green Golf Carbon technology"
             fill
             className="object-cover"
           />

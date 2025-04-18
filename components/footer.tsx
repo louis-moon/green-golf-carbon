@@ -17,13 +17,13 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
               <Leaf className="h-6 w-6 mr-2" />
-              <span className="text-2xl font-bold">Vadose Labs</span>
+              <span className="text-2xl font-bold">Green Golf Carbon</span>
             </div>
             <p className="text-emerald-100 mb-4 max-w-md">
               Transforming golf courses and managed turf into carbon sinks through innovative basalt-enhanced sand
               technology.
             </p>
-            <p className="text-emerald-200 text-sm">© {new Date().getFullYear()} Vadose Labs. All rights reserved.</p>
+            <p className="text-emerald-200 text-sm">© {new Date().getFullYear()} Green Golf Carbon. All rights reserved.</p>
           </div>
 
           <div>

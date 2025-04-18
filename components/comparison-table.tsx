@@ -18,7 +18,7 @@ export default function ComparisonTable() {
               <TableRow>
                 <TableHead className="w-[300px]">Feature</TableHead>
                 <TableHead className="text-center">Traditional Quartz Sand</TableHead>
-                <TableHead className="text-center">Vadose Labs Green Sand</TableHead>
+                <TableHead className="text-center">Green Golf Carbon Sand</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>

@@ -9,9 +9,9 @@ import Footer from "@/components/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Vadose Labs | Improving Soil Quality & Capturing CO2",
+  title: "Green Golf Carbon | Improving Soil Quality & Capturing CO2",
   description:
-    "Vadose Labs transforms golf courses and managed turf into carbon sinks through innovative basalt-enhanced sand technology.",
+    "Green Golf Carbon transforms golf courses and managed turf into carbon sinks through innovative basalt-enhanced sand technology.",
     generator: 'v0.dev'
 }
 

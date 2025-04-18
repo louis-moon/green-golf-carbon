@@ -8,7 +8,7 @@ export default function TeamSection() {
       name: "Brian Morrison",
       title: "CEO & Co-Inventor",
       bio: "Dartmouth College, BA Quant. Social Science. Former Goldman Sachs Financial Analyst.",
-      email: "Brian@vadoselabs.com",
+      email: "Brian@greengolfcarbon.com",
       image: "/placeholder.svg?height=400&width=400",
     },
     {
@@ -22,7 +22,7 @@ export default function TeamSection() {
       name: "Louis Moon",
       title: "Chief of Staff",
       bio: "Yale University, BS Statistics & Data Science. Tsai City Accelerator Alumnus, Product Manager.",
-      email: "Louis@vadoselabs.com",
+      email: "Louis@greengolfcarbon.com",
       image: "/placeholder.svg?height=400&width=400",
     },
   ]
@@ -33,7 +33,7 @@ export default function TeamSection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our Team</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            The experts behind Vadose Labs making grass greener and our planet healthier.
+            The experts behind Green Golf Carbon making grass greener and our planet healthier.
           </p>
         </div>
 
