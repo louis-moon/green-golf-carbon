@@ -1,0 +1,3 @@
+[build]
+  command = "npm run build"   # or pnpm/yarn
+  publish = "out"             # ← matches the folder created by next export
