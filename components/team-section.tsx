@@ -44,8 +44,8 @@ export default function TeamSection() {
                 <Image
                   src={member.image || "/placeholder.svg"}
                   alt={member.name}
-                  width={200}  // Specify width
-                  height={200} // Specify height
+                  width={300}  // Specify width
+                  height={300} // Specify height
                   className="object-cover rounded-t-lg"
                 />
               </div>
