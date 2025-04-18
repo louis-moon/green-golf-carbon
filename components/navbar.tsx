@@ -32,19 +32,19 @@ export default function Navbar() {
 
           <nav className="hidden md:flex items-center space-x-8">
             <button
-              onClick={() => scrollToSection("technology")}
+              onClick={() => scrollToSection("benefits")}
               className="text-gray-700 hover:text-emerald-600 font-medium"
             >
               Benefits
             </button>
             <button
-              onClick={() => scrollToSection("team")}
+              onClick={() => scrollToSection("technology")}
               className="text-gray-700 hover:text-emerald-600 font-medium"
             >
               Technology
             </button>
             <button
-              onClick={() => scrollToSection("benefits")}
+              onClick={() => scrollToSection("team")}
               className="text-gray-700 hover:text-emerald-600 font-medium"
             >
               Team
@@ -71,16 +71,16 @@ export default function Navbar() {
         <div className="md:hidden bg-white border-t">
           <div className="container mx-auto px-4 py-4 space-y-4">
             <button
-              onClick={() => scrollToSection("technology")}
-              className="block text-gray-700 hover:text-emerald-600 font-medium py-2 w-full text-left"
-            >
-              Technology
-            </button>
-            <button
               onClick={() => scrollToSection("benefits")}
               className="block text-gray-700 hover:text-emerald-600 font-medium py-2 w-full text-left"
             >
               Benefits
+            </button>
+            <button
+              onClick={() => scrollToSection("technology")}
+              className="block text-gray-700 hover:text-emerald-600 font-medium py-2 w-full text-left"
+            >
+              Technology
             </button>
             <button
               onClick={() => scrollToSection("team")}
