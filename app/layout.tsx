@@ -5,6 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import ClientOnlyNavbar from "@/components/ClientOnlyNavbar"; // Use ClientOnlyNavbar
 import Footer from "@/components/footer";
+import Head from "next/head"; // Import Head component
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Head>
+          {/* Favicon */}
+          <link rel="icon" href="/favicon.png" />
+          <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+          <link rel="icon" href="/favicon-32x32.png" sizes="32x32" />
+          <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+        </Head>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <ClientOnlyNavbar /> {/* Use ClientOnlyNavbar */}
           <div className="pt-20">{children}</div>
