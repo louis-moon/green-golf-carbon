@@ -8,43 +8,44 @@ export default function TeamSection() {
       name: "Brian Morrison",
       title: "CEO & Co-Inventor",
       bio: "Dartmouth College, BA Quant. Social Science. Former Goldman Sachs Financial Analyst.",
-      email: "Brian@greengolfcarbon.com",
-      image: "/brian.png?height=200&width=200",
+      email: "Brian@vadoselabs.com",
+      image: "/brian.png",
     },
     {
       name: "Mukul Sharma",
       title: "CTO & Co-Inventor",
       bio: "Dartmouth College, Professor of Earth Sciences. Guggenheim Fellow.",
       email: "Mukul.Sharma@dartmouth.edu",
-      image: "/mukul.png?height=200&width=200",
+      image: "/mukul.png",
     },
     {
       name: "Louis Moon",
       title: "Chief of Staff",
       bio: "Yale University, BS Statistics & Data Science. Tsai City Accelerator Alumnus, Product Manager.",
-      email: "Louis@greengolfcarbon.com",
-      image: "/louis.png?height=200&width=200",
+      email: "Louis@vadoselabs.com",
+      image: "/louis.png",
     },
   ]
 
   return (
-    <section id="team" className="w-full py-20 bg-gray-50">
+    <section className="w-full py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our Team</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            The experts behind Green Golf Carbon making grass greener and our planet healthier.
+            The experts behind Vadose Labs making grass greener and our planet healthier.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {team.map((member, index) => (
             <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow">
-              <div className="relative h-64 w-full">
+              <div className="relative h-64 w-full flex justify-center items-center"> {/* Added flex and centering */}
                 <Image
                   src={member.image || "/placeholder.svg"}
                   alt={member.name}
-                  fill
+                  width={250}  // Specify width
+                  height={250} // Specify height
                   className="object-cover rounded-t-lg"
                 />
               </div>

@@ -41,15 +41,18 @@ export default function HeroSection() {
             </Button>
           </div>
         </div>
-        <div className="ml-2 h-5 w-5">
+        
+        {/* Below text section */}
+        <div className="relative w-full h-80 md:h-96">
           <Image
             src="/cover.jpg?height=800&width=1200"
-            alt="Enhanced turf with Green Golf Carbon technology"
-            fill
-            className="object-cover"
+            alt="Golf course with Green Golf Carbon technology"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg"
           />
           <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-            <p className="text-2xl font-semibold px-6 text-center">Transforming Golf Courses into Carbon Sinks</p>
+            <p className="text-2xl font-semibold px-6 text-center text-white">Transforming Golf Courses into Carbon Sinks</p>
           </div>
         </div>
       </div>
