@@ -1,3 +1,5 @@
+// /components/contact-section.tsx
+
 "use client"
 
 import { useFormState } from "react-dom"
@@ -68,12 +70,10 @@ export default function ContactSection() {
           </Card>
 
           <div>
-            <form ref={formRef} action={handleSubmit} className="space-y-6">
+            <form ref={formRef} onSubmit={(e) => handleSubmit(new FormData(e.target))} className="space-y-6">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium">
-                    Name
-                  </label>
+                  <label htmlFor="name" className="text-sm font-medium">Name</label>
                   <Input
                     id="name"
                     name="name"
@@ -88,9 +88,7 @@ export default function ContactSection() {
                   )}
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium">
-                    Email
-                  </label>
+                  <label htmlFor="email" className="text-sm font-medium">Email</label>
                   <Input
                     id="email"
                     name="email"
@@ -107,9 +105,7 @@ export default function ContactSection() {
                 </div>
               </div>
               <div className="space-y-2">
-                <label htmlFor="facility" className="text-sm font-medium">
-                  Facility Type
-                </label>
+                <label htmlFor="facility" className="text-sm font-medium">Facility Type</label>
                 <Input
                   id="facility"
                   name="facility"
@@ -124,9 +120,7 @@ export default function ContactSection() {
                 )}
               </div>
               <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium">
-                  Message
-                </label>
+                <label htmlFor="message" className="text-sm font-medium">Message</label>
                 <Textarea
                   id="message"
                   name="message"
