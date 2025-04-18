@@ -57,13 +57,13 @@ export default function Footer() {
             <ul className="space-y-2">
               <li className="text-emerald-100">Butner, North Carolina</li>
               <li>
-                <a href="mailto:info@vadoselabs.com" className="text-emerald-100 hover:text-white">
-                  info@vadoselabs.com
+                <a href="mailto:info@greengolfcarbon.com" className="text-emerald-100 hover:text-white">
+                  info@greengolfcarbon.com
                 </a>
               </li>
               <li>
-                <a href="tel:+15551234567" className="text-emerald-100 hover:text-white">
-                  (555) 123-4567
+                <a href="tel:+7863508592" className="text-emerald-100 hover:text-white">
+                  (786) 350-8592
                 </a>
               </li>
             </ul>
