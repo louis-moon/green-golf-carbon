@@ -24,10 +24,22 @@ export default function HeroSection() {
             sand technology.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="bg-white text-emerald-800 hover:bg-emerald-100">
+            {/* Learn More Button */}
+            <Button
+              size="lg"
+              className="bg-white text-emerald-800 hover:bg-emerald-100"
+              onClick={() => scrollToSection('benefits')} // Scroll to benefits section
+            >
               Learn More <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" variant="outline" className="bg-white text-emerald-800 hover:bg-emerald-100">
+
+            {/* Contact Us Button */}
+            <Button
+              size="lg"
+              variant="outline"
+              className="bg-white text-emerald-800 hover:bg-emerald-100"
+              onClick={() => scrollToSection('contact')} // Scroll to contact section
+            >
               Contact Us
             </Button>
           </div>
