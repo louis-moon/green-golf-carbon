@@ -38,7 +38,8 @@ export default function ContactSection() {
       setIsPending(false)
     }
   }
-
+}
+/*
   return (
     <section id="contact" className="w-full py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -123,7 +124,7 @@ export default function ContactSection() {
                 />
               </div>
 
-              {/* Form-level error message */}
+              { Form-level error message }
               {formState.errors && (
                 <div className="p-3 rounded-md bg-red-50 text-red-500 flex items-center gap-2">
                   <AlertCircle className="h-5 w-5" />
@@ -131,7 +132,7 @@ export default function ContactSection() {
                 </div>
               )}
 
-              {/* Success message */}
+              { Success message }
               {formState.success && (
                 <div className="p-3 rounded-md bg-green-50 text-green-600 flex items-center gap-2">
                   <CheckCircle className="h-5 w-5" />
@@ -156,3 +157,4 @@ export default function ContactSection() {
     </section>
   )
 }
+*/
