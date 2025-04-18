@@ -47,15 +47,15 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2">
-              <li className="text-emerald-100">Butner, North Carolina</li>
+              <li className="text-emerald-100">Miami, Florida</li>
               <li>
                 <a href="mailto:info@vadoselabs.com" className="text-emerald-100 hover:text-white">
                   info@vadoselabs.com
                 </a>
               </li>
               <li>
-                <a href="tel:+15551234567" className="text-emerald-100 hover:text-white">
-                  (555) 123-4567
+                <a href="tel:+7863508592" className="text-emerald-100 hover:text-white">
+                  (786) 350-8592
                 </a>
               </li>
             </ul>
