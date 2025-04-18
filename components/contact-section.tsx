@@ -33,14 +33,14 @@ export default function ContactSection() {
                 <Phone className="h-6 w-6 text-emerald-600 mt-1" />
                 <div>
                   <h4 className="font-semibold">Phone</h4>
-                  <p className="text-gray-600">(555) 123-4567</p>
+                  <p className="text-gray-600">(786) 350-8592</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <MapPin className="h-6 w-6 text-emerald-600 mt-1" />
                 <div>
                   <h4 className="font-semibold">Office</h4>
-                  <p className="text-gray-600">Butner, North Carolina</p>
+                  <p className="text-gray-600">Miami, Florida</p>
                 </div>
               </div>
             </CardContent>
