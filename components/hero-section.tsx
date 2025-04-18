@@ -25,7 +25,7 @@ export default function HeroSection() {
         </div>
         <div className="relative w-full max-w-5xl h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-2xl">
           <Image
-            src="/placeholder.svg?height=800&width=1200"
+            src="/cover.jpg?height=800&width=1200"
             alt="Enhanced turf with Vadose Labs technology"
             fill
             className="object-cover"
