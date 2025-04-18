@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Mail, MapPin, Phone, CheckCircle, AlertCircle, Loader2 } from "lucide-react"
-
+/*
 export default function ContactSection() {
   const [formState, setFormState] = useState({ success: false, errors: null })
   const [isPending, setIsPending] = useState(false)
@@ -39,7 +39,7 @@ export default function ContactSection() {
     }
   }
 }
-/*
+
   return (
     <section id="contact" className="w-full py-20 bg-white">
       <div className="container mx-auto px-4">

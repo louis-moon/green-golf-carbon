@@ -1,12 +1,42 @@
 {
   "compilerOptions": {
-    "module": "ESNext", // Use ES modules
-    "moduleResolution": "node", // Resolve modules like Node.js
-    "target": "ESNext", // Use the latest ECMAScript features
-    "esModuleInterop": true, // Allow using CommonJS modules in ES modules
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ] // <— point @/ to the project root
+    },
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
   },
-  "include": ["generateRefreshToken.ts"]
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

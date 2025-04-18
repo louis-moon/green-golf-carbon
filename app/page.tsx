@@ -2,7 +2,6 @@ import HeroSection from "@/components/hero-section"
 import FeatureSection from "@/components/feature-section"
 import TechnologySection from "@/components/technology-section"
 import TeamSection from "@/components/team-section"
-import ContactSection from "@/components/contact-section"
 import ComparisonTable from "@/components/comparison-table"
 
 export default function Home() {
@@ -13,7 +12,6 @@ export default function Home() {
       <TechnologySection />
       <ComparisonTable />
       <TeamSection />
-      <ContactSection />
     </main>
   )
 }
