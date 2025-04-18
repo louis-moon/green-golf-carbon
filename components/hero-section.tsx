@@ -18,7 +18,7 @@ export default function HeroSection() {
             <Button size="lg" className="bg-white text-emerald-800 hover:bg-emerald-100">
               Learn More <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+            <Button size="lg" variant="outline" className="bg-white text-emerald-800 hover:bg-emerald-100">
               Contact Us
             </Button>
           </div>
