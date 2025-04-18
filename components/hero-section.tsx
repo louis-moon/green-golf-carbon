@@ -43,7 +43,7 @@ export default function HeroSection() {
         </div>
         <div className="ml-2 h-5 w-5">
           <Image
-            src="/cover.jpg?height=800&width=1200"
+            src="/placeholder.svg?height=800&width=1200"
             alt="Enhanced turf with Green Golf Carbon technology"
             fill
             className="object-cover"
