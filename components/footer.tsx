@@ -55,7 +55,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2">
-              <li className="text-emerald-100">Butner, North Carolina</li>
+              <li className="text-emerald-100">Miami, Florida</li>
               <li>
                 <a href="mailto:info@greengolfcarbon.com" className="text-emerald-100 hover:text-white">
                   info@greengolfcarbon.com
