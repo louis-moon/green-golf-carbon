@@ -27,9 +27,9 @@ export default function RootLayout({
         <Head>
           {/* Favicon */}
           <link rel="icon" href="/favicon.png" />
-          <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-          <link rel="icon" href="/favicon-32x32.png" sizes="32x32" />
-          <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+          <link rel="apple-touch-icon" href="/favicon.png" />
+          <link rel="icon" href="/favicon.png" sizes="32x32" />
+          <link rel="icon" href="/favicon.png" sizes="16x16" />
         </Head>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <ClientOnlyNavbar /> {/* Use ClientOnlyNavbar */}
