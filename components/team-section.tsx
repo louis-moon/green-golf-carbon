@@ -9,21 +9,21 @@ export default function TeamSection() {
       title: "CEO & Co-Inventor",
       bio: "Dartmouth College, BA Quant. Social Science. Former Goldman Sachs Financial Analyst.",
       email: "Brian@vadoselabs.com",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/brian.png?height=400&width=400",
     },
     {
       name: "Mukul Sharma",
       title: "CTO & Co-Inventor",
       bio: "Dartmouth College, Professor of Earth Sciences. Guggenheim Fellow.",
       email: "Mukul.Sharma@dartmouth.edu",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/mukul.png?height=400&width=400",
     },
     {
       name: "Louis Moon",
       title: "Chief of Staff",
       bio: "Yale University, BS Statistics & Data Science. Tsai City Accelerator Alumnus, Product Manager.",
       email: "Louis@vadoselabs.com",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/louis.png?height=400&width=400",
     },
   ]
 
