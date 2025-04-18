@@ -1,17 +1,10 @@
+// File: components/hero-section.tsx
+
 "use client"
 
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
 
 export default function HeroSection() {
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId)
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" })
-    }
-  }
-
   return (
     <section id="hero" className="w-full bg-gradient-to-br from-emerald-900 to-emerald-700 text-white">
       <div className="container mx-auto px-4 py-20 md:py-32 flex flex-col items-center">
@@ -23,26 +16,6 @@ export default function HeroSection() {
             Green Golf Carbon transforms golf courses and managed turf into carbon sinks through innovative basalt-enhanced
             sand technology.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            {/* Learn More Button */}
-            <Button
-              size="lg"
-              className="bg-white text-emerald-800 hover:bg-emerald-100"
-              onClick={() => scrollToSection('benefits')} // Scroll to benefits section
-            >
-              Learn More <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-
-            {/* Contact Us Button */}
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-white text-emerald-800 hover:bg-emerald-100"
-              onClick={() => scrollToSection('contact')} // Scroll to contact section
-            >
-              Contact Us
-            </Button>
-          </div>
         </div>
         <div className="relative w-full max-w-5xl h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-2xl">
           <Image
@@ -53,7 +26,9 @@ export default function HeroSection() {
             className="rounded-lg"
           />
           <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-            <p className="text-2xl font-semibold px-6 text-center text-white">Transforming Golf Courses into Carbon Sinks</p>
+            <p className="text-2xl font-semibold px-6 text-center">
+              Transforming Golf Courses into Carbon Sinks
+            </p>
           </div>
         </div>
       </div>
