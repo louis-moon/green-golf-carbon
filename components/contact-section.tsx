@@ -2,30 +2,41 @@
 
 "use client"
 
-import { useFormState } from "react-dom"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Mail, MapPin, Phone, CheckCircle, AlertCircle, Loader2 } from "lucide-react"
-import { submitContactForm, type ContactFormState } from "@/app/actions"
-import { useRef, useTransition } from "react"
 
 export default function ContactSection() {
-  const [formState, formAction] = useFormState<ContactFormState, FormData>(submitContactForm, {})
-  const [isPending, startTransition] = useTransition()
-  const formRef = useRef<HTMLFormElement>(null)
+  const [formState, setFormState] = useState({ success: false, errors: null })
+  const [isPending, setIsPending] = useState(false)
 
-  // Handle form submission with transition
-  const handleSubmit = (formData: FormData) => {
-    startTransition(() => {
-      formAction(formData)
-    })
-  }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsPending(true)
 
-  // Reset form after successful submission
-  if (formState.success && formRef.current) {
-    formRef.current.reset()
+    const formData = new FormData(e.target as HTMLFormElement)
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        body: new URLSearchParams(formData as any),
+      })
+
+      const result = await response.json()
+
+      if (result.success) {
+        setFormState({ success: true, errors: null })
+      } else {
+        setFormState({ success: false, errors: result.error })
+      }
+    } catch (error) {
+      setFormState({ success: false, errors: "There was an error submitting the form. Please try again." })
+    } finally {
+      setIsPending(false)
+    }
   }
 
   return (
@@ -70,7 +81,7 @@ export default function ContactSection() {
           </Card>
 
           <div>
-            <form ref={formRef} onSubmit={(e) => handleSubmit(new FormData(e.target))} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium">Name</label>
@@ -78,14 +89,8 @@ export default function ContactSection() {
                     id="name"
                     name="name"
                     placeholder="Your name"
-                    aria-invalid={!!formState?.errors?.name}
-                    aria-describedby={formState?.errors?.name ? "name-error" : undefined}
+                    required
                   />
-                  {formState?.errors?.name && (
-                    <p id="name-error" className="text-sm text-red-500">
-                      {formState.errors.name[0]}
-                    </p>
-                  )}
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-sm font-medium">Email</label>
@@ -94,14 +99,8 @@ export default function ContactSection() {
                     name="email"
                     type="email"
                     placeholder="Your email"
-                    aria-invalid={!!formState?.errors?.email}
-                    aria-describedby={formState?.errors?.email ? "email-error" : undefined}
+                    required
                   />
-                  {formState?.errors?.email && (
-                    <p id="email-error" className="text-sm text-red-500">
-                      {formState.errors.email[0]}
-                    </p>
-                  )}
                 </div>
               </div>
               <div className="space-y-2">
@@ -110,14 +109,8 @@ export default function ContactSection() {
                   id="facility"
                   name="facility"
                   placeholder="Golf course, athletic field, etc."
-                  aria-invalid={!!formState?.errors?.facility}
-                  aria-describedby={formState?.errors?.facility ? "facility-error" : undefined}
+                  required
                 />
-                {formState?.errors?.facility && (
-                  <p id="facility-error" className="text-sm text-red-500">
-                    {formState.errors.facility[0]}
-                  </p>
-                )}
               </div>
               <div className="space-y-2">
                 <label htmlFor="message" className="text-sm font-medium">Message</label>
@@ -126,21 +119,15 @@ export default function ContactSection() {
                   name="message"
                   placeholder="Tell us about your facility and needs"
                   rows={5}
-                  aria-invalid={!!formState?.errors?.message}
-                  aria-describedby={formState?.errors?.message ? "message-error" : undefined}
+                  required
                 />
-                {formState?.errors?.message && (
-                  <p id="message-error" className="text-sm text-red-500">
-                    {formState.errors.message[0]}
-                  </p>
-                )}
               </div>
 
               {/* Form-level error message */}
-              {formState?.errors?._form && (
+              {formState.errors && (
                 <div className="p-3 rounded-md bg-red-50 text-red-500 flex items-center gap-2">
                   <AlertCircle className="h-5 w-5" />
-                  <p>{formState.errors._form[0]}</p>
+                  <p>{formState.errors}</p>
                 </div>
               )}
 
