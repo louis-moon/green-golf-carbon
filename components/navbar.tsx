@@ -1,12 +1,3 @@
-// /components/navbar.tsx
-
-"use client"
-
-import { useState } from "react"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
-
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -18,7 +9,7 @@ export default function Navbar() {
     setIsMenuOpen(false)
     const section = document.getElementById(sectionId)
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" })
+      section.scrollIntoView({ behavior: "smooth", block: "start" }) // Ensures the section aligns to the top
     }
   }
 
