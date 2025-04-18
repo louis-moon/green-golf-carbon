@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import dynamic from "next/dynamic"; // Import dynamic from Next.js
+import ClientOnlyNavbar from "@/components/ClientOnlyNavbar"; // Use ClientOnlyNavbar
 import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,9 +15,6 @@ export const metadata: Metadata = {
   generator: "v0.dev",
 };
 
-// Dynamically import Navbar with ssr: false to disable server-side rendering for this component
-const Navbar = dynamic(() => import("@/components/navbar"), { ssr: false });
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          <Navbar /> {/* This will now be dynamically imported client-side */}
+          <ClientOnlyNavbar /> {/* Use ClientOnlyNavbar */}
           <div className="pt-20">{children}</div>
           <Footer />
         </ThemeProvider>
