@@ -36,7 +36,7 @@ export default function TechnologySection() {
   ]
 
   return (
-    <section className="w-full py-20 bg-gray-50">
+    <section id="technology" className="w-full py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">How Our Technology Works</h2>
@@ -48,7 +48,7 @@ export default function TechnologySection() {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
             <Image
-              src="/erw.jpg?height=800&width=800"
+              src="/placeholder.svg?height=800&width=800"
               alt="Enhanced Rock Weathering Process"
               fill
               className="object-cover"

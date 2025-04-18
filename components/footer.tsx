@@ -1,7 +1,15 @@
-import Link from "next/link"
+"use client"
+
 import { Leaf } from "lucide-react"
 
 export default function Footer() {
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId)
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   return (
     <footer className="w-full bg-emerald-900 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -22,24 +30,24 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#technology" className="text-emerald-100 hover:text-white">
+                <button onClick={() => scrollToSection("technology")} className="text-emerald-100 hover:text-white">
                   Our Technology
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="#benefits" className="text-emerald-100 hover:text-white">
+                <button onClick={() => scrollToSection("benefits")} className="text-emerald-100 hover:text-white">
                   Benefits
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="#team" className="text-emerald-100 hover:text-white">
+                <button onClick={() => scrollToSection("team")} className="text-emerald-100 hover:text-white">
                   Our Team
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="#contact" className="text-emerald-100 hover:text-white">
+                <button onClick={() => scrollToSection("contact")} className="text-emerald-100 hover:text-white">
                   Contact Us
-                </Link>
+                </button>
               </li>
             </ul>
           </div>
@@ -47,15 +55,15 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2">
-              <li className="text-emerald-100">Miami, Florida</li>
+              <li className="text-emerald-100">Butner, North Carolina</li>
               <li>
                 <a href="mailto:info@vadoselabs.com" className="text-emerald-100 hover:text-white">
                   info@vadoselabs.com
                 </a>
               </li>
               <li>
-                <a href="tel:+7863508592" className="text-emerald-100 hover:text-white">
-                  (786) 350-8592
+                <a href="tel:+15551234567" className="text-emerald-100 hover:text-white">
+                  (555) 123-4567
                 </a>
               </li>
             </ul>
