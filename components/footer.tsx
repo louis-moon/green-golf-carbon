@@ -1,6 +1,6 @@
 "use client"
 
-import { Leaf } from "lucide-react"
+import { Grass } from "lucide-react"
 
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
-              <Leaf className="h-6 w-6 mr-2" />
+              <Grass className="h-6 w-6 mr-2" />
               <span className="text-2xl font-bold">Green Golf Carbon</span>
             </div>
             <p className="text-emerald-100 mb-4 max-w-md">
