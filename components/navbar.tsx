@@ -41,8 +41,6 @@ export default function Navbar() {
               Team
             </button>
             <Button onClick={() => scrollToSection("contact")} className="bg-emerald-600 hover:bg-emerald-700">
-              Get Started
-            </Button>
           </nav>
 
           <button className="md:hidden" onClick={toggleMenu}>
