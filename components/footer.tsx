@@ -1,13 +1,12 @@
+// components/footer.tsx
+
 "use client"
 
-import { Grass } from "lucide-react"
+import Image from "next/image"
 
 export default function Footer() {
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId)
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" })
-    }
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
   }
 
   return (
@@ -16,14 +15,22 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
-              <Grass className="h-6 w-6 mr-2" />
+              <Image
+                src="/logo.png"
+                alt="Green Golf Carbon Logo"
+                width={24}
+                height={24}
+                className="mr-2"
+              />
               <span className="text-2xl font-bold">Green Golf Carbon</span>
             </div>
             <p className="text-emerald-100 mb-4 max-w-md">
               Transforming golf courses and managed turf into carbon sinks through innovative basalt-enhanced sand
               technology.
             </p>
-            <p className="text-emerald-200 text-sm">© {new Date().getFullYear()} Green Golf Carbon. All rights reserved.</p>
+            <p className="text-emerald-200 text-sm">
+              © {new Date().getFullYear()} Green Golf Carbon. All rights reserved.
+            </p>
           </div>
 
           <div>

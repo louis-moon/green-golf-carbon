@@ -1,25 +1,19 @@
-// File: components/navbar.tsx
+// components/navbar.tsx
 
 "use client"
 
 import { useState } from "react"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import Image from "next/image"
 import { Menu, X } from "lucide-react"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
-
-  const scrollToSection = (sectionId: string) => {
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+  const scrollToSection = (id: string) => {
     setIsMenuOpen(false)
-    const section = document.getElementById(sectionId)
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" })
-    }
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" })
   }
 
   return (
@@ -27,6 +21,13 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center">
+            <Image
+              src="/logo.png"
+              alt="Green Golf Carbon Logo"
+              width={40}
+              height={40}
+              className="mr-2"
+            />
             <span className="text-2xl font-bold text-emerald-700">Green Golf Carbon</span>
           </Link>
 
