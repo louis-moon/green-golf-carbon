@@ -40,7 +40,6 @@ export default function Navbar() {
             <button onClick={() => scrollToSection("team")} className="text-gray-700 hover:text-emerald-600 font-medium">
               Team
             </button>
-            <Button onClick={() => scrollToSection("contact")} className="bg-emerald-600 hover:bg-emerald-700">
           </nav>
 
           <button className="md:hidden" onClick={toggleMenu}>
@@ -61,9 +60,6 @@ export default function Navbar() {
             <button onClick={() => scrollToSection("team")} className="block text-gray-700 hover:text-emerald-600 font-medium py-2 w-full text-left">
               Team
             </button>
-            <Button onClick={() => scrollToSection("contact")} className="w-full bg-emerald-600 hover:bg-emerald-700">
-              Get Started
-            </Button>
           </div>
         </div>
       )}
