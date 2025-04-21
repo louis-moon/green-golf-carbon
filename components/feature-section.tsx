@@ -1,10 +1,10 @@
-import { Grass, BarChart2, Droplets, Award } from "lucide-react"
+import { Mountain, BarChart2, Droplets, Award } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function FeatureSection() {
   const features = [
     {
-      icon: <Grass className="h-12 w-12 text-emerald-600" />,
+      icon: <Mountain className="h-12 w-12 text-emerald-600" />,
       title: "Optimized Basalt Blend",
       description:
         "Our proprietary basalt blend actively captures CO2 while improving soil quality for healthier turf.",
