@@ -51,11 +51,7 @@ export default function Footer() {
                   Our Team
                 </button>
               </li>
-              <li>
-                <button onClick={() => scrollToSection("contact")} className="text-emerald-100 hover:text-white">
-                  Contact Us
-                </button>
-              </li>
+              {/* Contact Us removed */}
             </ul>
           </div>
 

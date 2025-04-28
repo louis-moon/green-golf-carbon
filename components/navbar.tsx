@@ -6,6 +6,7 @@ import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Menu, X } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -32,7 +33,7 @@ export default function Navbar() {
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
-          <button onClick={() => scrollToSection("hero")} className="text-gray-700 hover:text-emerald-600 font-medium">
+            <button onClick={() => scrollToSection("hero")} className="text-gray-700 hover:text-emerald-600 font-medium">
               Home
             </button>
             <button onClick={() => scrollToSection("benefits")} className="text-gray-700 hover:text-emerald-600 font-medium">
@@ -44,6 +45,16 @@ export default function Navbar() {
             <button onClick={() => scrollToSection("team")} className="text-gray-700 hover:text-emerald-600 font-medium">
               Team
             </button>
+            <Button asChild variant="default" size="default">
+              <a
+                href="https://calendly.com/louis-greengolfcarbon/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-emerald-600 hover:bg-emerald-700 text-white"
+              >
+                Get Started
+              </a>
+            </Button>
           </nav>
 
           <button className="md:hidden" onClick={toggleMenu}>
@@ -67,6 +78,16 @@ export default function Navbar() {
             <button onClick={() => scrollToSection("team")} className="block text-gray-700 hover:text-emerald-600 font-medium py-2 w-full text-left">
               Team
             </button>
+            <Button asChild variant="default" size="default" className="w-full">
+              <a
+                href="https://calendly.com/louis-greengolfcarbon/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-center bg-emerald-600 hover:bg-emerald-700 text-white py-2 rounded"
+              >
+                Get Started
+              </a>
+            </Button>
           </div>
         </div>
       )}
