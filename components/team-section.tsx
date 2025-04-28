@@ -33,7 +33,7 @@ export default function TeamSection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our Team</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            The experts behind Vadose Labs making grass greener and our planet healthier.
+            The people behind Green Golf Carbon making grass greener and our planet healthier.
           </p>
         </div>
 
