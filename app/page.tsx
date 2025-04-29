@@ -4,6 +4,7 @@ import TechnologySection from "@/components/technology-section"
 import TeamSection from "@/components/team-section"
 import ComparisonTable from "@/components/comparison-table"
 import SubscribeSection from "@/components/SubscribeSection"
+import ContactSection from "@/components/contact-section"
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <TechnologySection />
       <ComparisonTable />
       <TeamSection />
+      <ContactSection />
     </main>
   )
 }
