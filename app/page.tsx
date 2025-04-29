@@ -15,6 +15,7 @@ export default function Home() {
       <ComparisonTable />
       <TeamSection />
       <ContactSection />
+      <SubscribeSection />
     </main>
   )
 }
