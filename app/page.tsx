@@ -3,6 +3,7 @@ import FeatureSection from "@/components/feature-section"
 import TechnologySection from "@/components/technology-section"
 import TeamSection from "@/components/team-section"
 import ComparisonTable from "@/components/comparison-table"
+import SubscribeSection from "@/components/SubscribeSection"
 
 export default function Home() {
   return (

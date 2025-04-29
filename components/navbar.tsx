@@ -33,16 +33,28 @@ export default function Navbar() {
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
-            <button onClick={() => scrollToSection("hero")} className="text-gray-700 hover:text-emerald-600 font-medium">
+            <button
+              onClick={() => scrollToSection("hero")}
+              className="text-gray-700 hover:text-emerald-600 font-medium"
+            >
               Home
             </button>
-            <button onClick={() => scrollToSection("benefits")} className="text-gray-700 hover:text-emerald-600 font-medium">
+            <button
+              onClick={() => scrollToSection("benefits")}
+              className="text-gray-700 hover:text-emerald-600 font-medium"
+            >
               Benefits
             </button>
-            <button onClick={() => scrollToSection("technology")} className="text-gray-700 hover:text-emerald-600 font-medium">
+            <button
+              onClick={() => scrollToSection("technology")}
+              className="text-gray-700 hover:text-emerald-600 font-medium"
+            >
               How it works
             </button>
-            <button onClick={() => scrollToSection("team")} className="text-gray-700 hover:text-emerald-600 font-medium">
+            <button
+              onClick={() => scrollToSection("team")}
+              className="text-gray-700 hover:text-emerald-600 font-medium"
+            >
               Team
             </button>
             <Button asChild variant="default" size="default">
@@ -58,7 +70,11 @@ export default function Navbar() {
           </nav>
 
           <button className="md:hidden" onClick={toggleMenu}>
-            {isMenuOpen ? <X className="h-6 w-6 text-gray-700" /> : <Menu className="h-6 w-6 text-gray-700" />}
+            {isMenuOpen ? (
+              <X className="h-6 w-6 text-gray-700" />
+            ) : (
+              <Menu className="h-6 w-6 text-gray-700" />
+            )}
           </button>
         </div>
       </div>
@@ -66,16 +82,28 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t">
           <div className="container mx-auto px-4 py-4 space-y-4">
-            <button onClick={() => scrollToSection("hero")} className="block text-gray-700 hover:text-emerald-600 font-medium py-2 w-full text-left">
+            <button
+              onClick={() => scrollToSection("hero")}
+              className="block text-gray-700 hover:text-emerald-600 font-medium py-2 w-full text-left"
+            >
               Home
             </button>
-            <button onClick={() => scrollToSection("benefits")} className="block text-gray-700 hover:text-emerald-600 font-medium py-2 w-full text-left">
+            <button
+              onClick={() => scrollToSection("benefits")}
+              className="block text-gray-700 hover:text-emerald-600 font-medium py-2 w-full text-left"
+            >
               Benefits
             </button>
-            <button onClick={() => scrollToSection("technology")} className="block text-gray-700 hover:text-emerald-600 font-medium py-2 w-full text-left">
+            <button
+              onClick={() => scrollToSection("technology")}
+              className="block text-gray-700 hover:text-emerald-600 font-medium py-2 w-full text-left"
+            >
               How it works
             </button>
-            <button onClick={() => scrollToSection("team")} className="block text-gray-700 hover:text-emerald-600 font-medium py-2 w-full text-left">
+            <button
+              onClick={() => scrollToSection("team")}
+              className="block text-gray-700 hover:text-emerald-600 font-medium py-2 w-full text-left"
+            >
               Team
             </button>
             <Button asChild variant="default" size="default" className="w-full">
