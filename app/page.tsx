@@ -1,8 +1,10 @@
+// app/page.tsx
+
 import HeroSection from "@/components/hero-section"
 import FeatureSection from "@/components/feature-section"
 import TechnologySection from "@/components/technology-section"
-import TeamSection from "@/components/team-section"
 import ComparisonTable from "@/components/comparison-table"
+import TeamSection from "@/components/team-section"
 import SubscribeSection from "@/components/SubscribeSection"
 import ContactSection from "@/components/contact-section"
 
@@ -13,9 +15,9 @@ export default function Home() {
       <FeatureSection />
       <TechnologySection />
       <ComparisonTable />
+      <SubscribeSection />
       <TeamSection />
       <ContactSection />
-      <SubscribeSection />
     </main>
   )
 }
