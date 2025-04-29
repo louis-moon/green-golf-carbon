@@ -60,7 +60,8 @@ export default function Navbar() {
             >
               Team
             </button>
-            <Button variant="default" onClick={() => scrollToSection("subscribe")}>
+            {/* Updated: Get Started now scrolls to the contact section */}
+            <Button variant="default" onClick={() => scrollToSection("contact")}>
               Get Started
             </Button>
           </nav>
@@ -102,11 +103,12 @@ export default function Navbar() {
             >
               Team
             </button>
+            {/* Updated: mobile Get Started links to contact, storing emails via supabase in ContactSection */}
             <Button
               variant="default"
               size="default"
               className="w-full"
-              onClick={() => scrollToSection("subscribe")}
+              onClick={() => scrollToSection("contact")}
             >
               Get Started
             </Button>
@@ -114,5 +116,5 @@ export default function Navbar() {
         </div>
       )}
     </header>
-  )
+)
 }
