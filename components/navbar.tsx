@@ -14,7 +14,10 @@ export default function Navbar() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
   const scrollToSection = (id: string) => {
     setIsMenuOpen(false)
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" })
+    const el = document.getElementById(id)
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" })
+    }
   }
 
   return (
@@ -57,15 +60,8 @@ export default function Navbar() {
             >
               Team
             </button>
-            <Button asChild variant="default" size="default">
-              <a
-                href="https://calendly.com/louis-greengolfcarbon/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-emerald-600 hover:bg-emerald-700 text-white"
-              >
-                Get Started
-              </a>
+            <Button variant="default" onClick={() => scrollToSection("subscribe")}>
+              Get Started
             </Button>
           </nav>
 
@@ -106,15 +102,13 @@ export default function Navbar() {
             >
               Team
             </button>
-            <Button asChild variant="default" size="default" className="w-full">
-              <a
-                href="https://calendly.com/louis-greengolfcarbon/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-center bg-emerald-600 hover:bg-emerald-700 text-white py-2 rounded"
-              >
-                Get Started
-              </a>
+            <Button
+              variant="default"
+              size="default"
+              className="w-full"
+              onClick={() => scrollToSection("subscribe")}
+            >
+              Get Started
             </Button>
           </div>
         </div>
