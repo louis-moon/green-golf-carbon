@@ -15,7 +15,6 @@ export default function Home() {
       <FeatureSection />
       <TechnologySection />
       <ComparisonTable />
-      <SubscribeSection />
       <TeamSection />
       <ContactSection />
     </main>
