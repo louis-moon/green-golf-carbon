@@ -291,6 +291,7 @@ def main():
     docs = ROOT / "docs"
     docs.mkdir(exist_ok=True)
     (docs / "index.html").write_text(html_page(items), encoding="utf-8")
+    (docs / ".nojekyll").write_text("")
 
     # Teams
     page_url = os.getenv("DIGEST_URL")  # optional
