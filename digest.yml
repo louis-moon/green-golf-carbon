@@ -1,0 +1,32 @@
+name: daily-digest
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # 11:30 UTC ≈ 7:30am ET (adjust as needed; GitHub cron uses UTC)
+    - cron: "30 11 * * 1-5"
+    # 21:00 UTC ≈ 5:00pm ET
+    - cron: "0 21 * * 1-5"
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # allow committing the HTML + seen.json back
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: pip install -r requirements.txt
+      - name: Run digest
+        env:
+          TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          DIGEST_URL: ${{ vars.DIGEST_URL }}
+        run: python digest.py
+      - name: Commit updates (if any)
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "github-actions"
+          git add docs/index.html data/seen.json || true
+          git diff --staged --quiet || git commit -m "Update digest $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
