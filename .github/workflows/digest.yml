@@ -28,5 +28,7 @@ jobs:
           git config user.email "actions@github.com"
           git config user.name "github-actions"
           git add docs/.nojekyll docs/index.html data/seen.json || true
-          git diff --staged --quiet || git commit -m "Update digest $(date -u +'%Y-%m-%d %H:%M UTC')"
-          git push
+          if ! git diff --cached --quiet; then
+            git commit -m "Update digest $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push origin HEAD:main
+          fi
