@@ -8,8 +8,8 @@
     "carbon credit","MRV","Isometric","Puro.earth"
   ],
   "rss_feeds": [
-    "https://www.golfcourseindustry.com/rss/",       // Golf Course Industry site shows an RSS feed link
-    "https://feed.podbean.com/usgags/feed.xml",      // USGA Green Section Podcast RSS
-    "https://mediacenter.usga.org/index.php?rsspage=20295&s=20324" // USGA Media Center RSS index
+    "https://www.golfcourseindustry.com/rss/",
+    "https://feed.podbean.com/usgags/feed.xml",
+    "https://mediacenter.usga.org/index.php?rsspage=20295&s=20324"
   ]
 }
