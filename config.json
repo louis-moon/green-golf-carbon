@@ -1,0 +1,15 @@
+{
+  "states": ["CA","AZ","TX","FL","NV","CO","UT","NM","NC","SC","GA","AL","WA","OR","ID","MT","WY","SD","NE","KS","OK","AR","LA","MS","TN","KY","VA","WV","PA","NY","NJ","CT","MA","RI","NH","VT","ME","IL","IN","OH","MI","WI","MN","IA","MO","ND","DE","MD","DC"],
+  "keywords": [
+    "enhanced rock weathering","ERW","basalt","olivine",
+    "golf course","turfgrass","USGA","GCSAA",
+    "irrigation","water restriction","water conservation",
+    "drought","heat","soil pH","topdressing",
+    "carbon credit","MRV","Isometric","Puro.earth"
+  ],
+  "rss_feeds": [
+    "https://www.golfcourseindustry.com/rss/",       // Golf Course Industry site shows an RSS feed link
+    "https://feed.podbean.com/usgags/feed.xml",      // USGA Green Section Podcast RSS
+    "https://mediacenter.usga.org/index.php?rsspage=20295&s=20324" // USGA Media Center RSS index
+  ]
+}
