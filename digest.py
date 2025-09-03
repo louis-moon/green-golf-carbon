@@ -141,9 +141,7 @@ def fetch_rss():
     return items
 
 def fetch_gdelt():
-    # Use DOC API (free). Example params: query, mode=ArtList, format=json
-    items=[]
-    # Focus queries to reduce noise
+    items = []
     queries = [
         "golf course AND drought",
         "golf AND irrigation restriction",
@@ -152,19 +150,27 @@ def fetch_gdelt():
         "USGA OR GCSAA AND sustainability"
     ]
     for q in queries:
-        p={"query": q, "mode":"ArtList", "format":"json"}
-        r = requests.get(GDELT_DOC, params=p, timeout=30)
-        if r.status_code!=200: continue
-        arts = r.json().get("articles", [])
-        for a in arts[:40]:
-            title = norm(a.get("title",""))
-            url = a.get("url","")
-            if not title or not url: continue
+        p = {"query": q, "mode": "ArtList", "format": "json"}
+        try:
+            r = requests.get(GDELT_DOC, params=p, timeout=30)
+            if r.status_code != 200 or "json" not in r.headers.get("Content-Type", ""):
+                print(f"⚠️ GDELT returned {r.status_code} for query '{q}'")
+                continue
+            data = r.json()
+        except Exception as e:
+            print(f"⚠️ Failed to fetch GDELT for '{q}': {e}")
+            continue
+
+        for a in data.get("articles", [])[:40]:
+            title = norm(a.get("title", ""))
+            url = a.get("url", "")
+            if not title or not url:
+                continue
             items.append({
-                "source": a.get("sourceCommonName","GDELT"),
+                "source": a.get("sourceCommonName", "GDELT"),
                 "title": title,
                 "url": url,
-                "published": a.get("seendate",""),
+                "published": a.get("seendate", ""),
                 "text": title
             })
     return items
