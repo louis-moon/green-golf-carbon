@@ -6,14 +6,14 @@ export default function TeamSection() {
   const team = [
     {
       name: "Brian Morrison",
-      title: "CEO & Co-Inventor",
+      title: "CEO & Co-founder",
       bio: "Dartmouth College\nBA Quant. Social Science\nex-Goldman Sachs",
       email: "Brian@greengolfcarbon.com",
       image: "/brian.png",
     },
     {
       name: "Mukul Sharma",
-      title: "CTO & Co-Inventor",
+      title: "CTO & Co-founder",
       bio: "Dartmouth College\nProfessor of Earth Sciences\nGuggenheim Fellow",
       email: "Mukul.Sharma@dartmouth.edu",
       image: "/mukul.png",
@@ -21,7 +21,7 @@ export default function TeamSection() {
     {
       name: "Louis Moon",
       title: "Chief of Staff",
-      bio: "Yale University\nBS Statistics & Data Science\nex-Product Manager",
+      bio: "Yale College\nBS Statistics & Data Science\nex-Product Manager",
       email: "Louis@greengolfcarbon.com",
       image: "/louis.png",
     },
