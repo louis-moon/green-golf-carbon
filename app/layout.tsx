@@ -10,9 +10,9 @@ export const metadata: Metadata = {
   description:
     "Green Golf Carbon transforms golf courses and managed turf into carbon sinks through innovative basalt-enhanced sand technology.",
   icons: {
-    icon: "/ggc_logo.jpg",        // or better: a 32x32/48x48 PNG
-    shortcut: "/ggc_logo.jpg",
-    apple: "/ggc_logo.jpg",       // ideally 180x180 PNG for iOS
+    icon: "/logo.png",        // or better: a 32x32/48x48 PNG
+    shortcut: "/logo.png",
+    apple: "/logo.png",       // ideally 180x180 PNG for iOS
   },
 };
 
