@@ -1,46 +1,48 @@
 // components/navbar.tsx
-
 "use client"
 
-import { useState } from "react"
+import React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function Navbar() {
-  return (
-    <nav className="...">
-      <Link href="/" className="flex items-center gap-2">
-        <Image
-          src="/ggc_logo.jpg"   // <-- note the leading slash
-          alt="Green Golf Carbon"
-          width={32}
-          height={32}
-          priority
-        />
-        <span className="font-semibold">Green Golf Carbon</span>
-      </Link>
-      {/* ... */}
-    </nav>
-  );
-}
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
+
+  const toggleMenu = () => setIsMenuOpen((v) => !v)
+
+  const scrollToSection = (id: string) => {
+    // Close mobile menu after navigating
+    setIsMenuOpen(false)
+
+    const el = document.getElementById(id)
+    if (!el) return
+
+    // offset for fixed header
+    const HEADER_OFFSET = 80
+    const y = el.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET
+    window.scrollTo({ top: y, behavior: "smooth" })
+  }
 
   return (
     <header className="w-full bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/logo.png"
-              alt="Green Golf Carbon Logo"
+              src="/ggc_logo.jpg"
+              alt="Green Golf Carbon"
               width={40}
               height={40}
-              className="mr-2"
+              priority
             />
-            <span className="text-2xl font-bold text-emerald-700">Green Golf Carbon</span>
+            <span className="text-2xl font-bold text-emerald-700">
+              Green Golf Carbon
+            </span>
           </Link>
 
+          {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection("hero")}
@@ -66,13 +68,17 @@ export default function Navbar() {
             >
               Team
             </button>
-            {/* Updated: Get Started now scrolls to the contact section */}
             <Button variant="default" onClick={() => scrollToSection("contact")}>
               Get Started
             </Button>
           </nav>
 
-          <button className="md:hidden" onClick={toggleMenu}>
+          {/* Mobile Toggle */}
+          <button
+            className="md:hidden p-2 rounded hover:bg-gray-100"
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
             {isMenuOpen ? (
               <X className="h-6 w-6 text-gray-700" />
             ) : (
@@ -82,6 +88,7 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t">
           <div className="container mx-auto px-4 py-4 space-y-4">
@@ -109,7 +116,6 @@ export default function Navbar() {
             >
               Team
             </button>
-            {/* Updated: mobile Get Started links to contact, storing emails via supabase in ContactSection */}
             <Button
               variant="default"
               size="default"
@@ -122,5 +128,5 @@ export default function Navbar() {
         </div>
       )}
     </header>
-)
+  )
 }
