@@ -14,14 +14,14 @@ export default function TeamSection() {
     {
       name: "Mukul Sharma",
       title: "CTO & Co-Inventor",
-      bio: "Dartmouth College\nProfessor of Earth Sciences\nGuggenheim Fellow.",
+      bio: "Dartmouth College\nProfessor of Earth Sciences\nGuggenheim Fellow",
       email: "Mukul.Sharma@dartmouth.edu",
       image: "/mukul.png",
     },
     {
       name: "Louis Moon",
       title: "Chief of Staff",
-      bio: "Yale University\nBS Statistics & Data Science\nex-Product Manager.",
+      bio: "Yale University\nBS Statistics & Data Science\nex-Product Manager",
       email: "Louis@greengolfcarbon.com",
       image: "/louis.png",
     },

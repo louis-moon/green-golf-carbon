@@ -52,7 +52,7 @@ export default function Navbar() {
               onClick={() => scrollToSection("technology")}
               className="text-gray-700 hover:text-emerald-600 font-medium"
             >
-              How it works
+              How It Works
             </button>
             <button
               onClick={() => scrollToSection("team")}
@@ -95,7 +95,7 @@ export default function Navbar() {
               onClick={() => scrollToSection("technology")}
               className="block text-gray-700 hover:text-emerald-600 font-medium py-2 w-full text-left"
             >
-              How it works
+              How It Works
             </button>
             <button
               onClick={() => scrollToSection("team")}
