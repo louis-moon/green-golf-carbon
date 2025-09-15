@@ -60,8 +60,8 @@ export default function Footer() {
             <ul className="space-y-2">
               <li className="text-emerald-100">Miami, Florida</li>
               <li>
-                <a href="mailto:info@greengolfcarbon.com" className="text-emerald-100 hover:text-white">
-                  info@greengolfcarbon.com
+                <a href="mailto:Louis@greengolfcarbon.com" className="text-emerald-100 hover:text-white">
+                  Louis@greengolfcarbon.com
                 </a>
               </li>
               <li>
