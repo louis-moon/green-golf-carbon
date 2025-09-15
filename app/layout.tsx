@@ -1,11 +1,10 @@
-import type React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import ClientOnlyNavbar from "@/components/ClientOnlyNavbar"; // Use ClientOnlyNavbar
+import ClientOnlyNavbar from "@/components/ClientOnlyNavbar";
 import Footer from "@/components/footer";
-import Head from "next/head"; // Import Head component
+import { Toaster as SonnerToaster } from "@/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,27 +13,21 @@ export const metadata: Metadata = {
   description:
     "Green Golf Carbon transforms golf courses and managed turf into carbon sinks through innovative basalt-enhanced sand technology.",
   generator: "v0.dev",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Head>
-          {/* Favicon */}
-          <link rel="icon" href="/favicon.png" />
-          <link rel="apple-touch-icon" href="/favicon.png" />
-          <link rel="icon" href="/favicon.png" sizes="32x32" />
-          <link rel="icon" href="/favicon.png" sizes="16x16" />
-        </Head>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          <ClientOnlyNavbar /> {/* Use ClientOnlyNavbar */}
+          <ClientOnlyNavbar />
           <div className="pt-20">{children}</div>
           <Footer />
+          <SonnerToaster />
         </ThemeProvider>
       </body>
     </html>
