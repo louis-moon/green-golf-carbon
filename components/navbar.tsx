@@ -9,16 +9,22 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
-  const scrollToSection = (id: string) => {
-    setIsMenuOpen(false)
-    const el = document.getElementById(id)
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" })
-    }
-  }
+  return (
+    <nav className="...">
+      <Link href="/" className="flex items-center gap-2">
+        <Image
+          src="/ggc_logo.jpg"   // <-- note the leading slash
+          alt="Green Golf Carbon"
+          width={32}
+          height={32}
+          priority
+        />
+        <span className="font-semibold">Green Golf Carbon</span>
+      </Link>
+      {/* ... */}
+    </nav>
+  );
+}
 
   return (
     <header className="w-full bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
