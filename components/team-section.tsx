@@ -7,7 +7,7 @@ export default function TeamSection() {
     {
       name: "Brian Morrison",
       title: "CEO & Co-founder",
-      bio: "Dartmouth College; Quantitative Social Science (B.A.); ex-Goldman Sachs",
+      bio: "Dartmouth College; Quantitative Social Science (B.A.); ex-Goldman",
       email: "Brian@greengolfcarbon.com",
       image: "/brian.png",
     },
