@@ -1,30 +1,69 @@
-# Vadose Labs website
+# Green Golf Carbon
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+Transforming golf courses and managed turf into **carbon sinks** using innovative **basalt-enhanced sand** technology.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/louismoon2011-gmailcoms-projects/v0-vadose-labs-website)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/nqhz5LDx6KI)
+![Green Golf Carbon hero](public/cover.jpg)
+
+---
+
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Editing Site Content](#editing-site-content)
+- [Anchors & Smooth Scrolling](#anchors--smooth-scrolling)
+- [Logos & Images](#logos--images)
+- [Styling & UI](#styling--ui)
+- [Quality Checks](#quality-checks)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+---
 
 ## Overview
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+**Green Golf Carbon** showcases how basalt-enhanced sand improves soil quality and captures atmospheric CO₂ across golf courses and managed turf. This site is a marketing/landing page built with **Next.js** and styled with **Tailwind CSS**, featuring smooth in-page navigation and responsive layout.
 
-## Deployment
+---
 
-Your project is live at:
+## Features
 
-**[https://vercel.com/louismoon2011-gmailcoms-projects/v0-vadose-labs-website](https://vercel.com/louismoon2011-gmailcoms-projects/v0-vadose-labs-website)**
+- ✨ **Hero section** with headline & responsive image
+- 🧭 **Sticky navbar** with smooth scrolling to sections
+- 🔗 **Footer quick links** (Technology, Benefits, Team)
+- 📱 Fully **responsive** layout
+- ♿ Accessible defaults (semantic HTML, keyboard-friendly nav)
+- ⚡ Built on **Next.js** Image optimization
 
-## Build your app
+---
 
-Continue building your app on:
+## Tech Stack
 
-**[https://v0.dev/chat/projects/nqhz5LDx6KI](https://v0.dev/chat/projects/nqhz5LDx6KI)**
+- **Framework:** Next.js (React, TypeScript ready)
+- **Styling:** Tailwind CSS
+- **UI:** shadcn/ui components, lucide-react icons
+- **Images:** `next/image` from `/public`
 
-## How It Works
+---
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+## Getting Started
+
+> Prereqs: Node.js LTS (18+ recommended) and npm or yarn.
+
+```bash
+# 1) Install dependencies
+npm install
+
+# 2) Start the dev server
+npm run dev
+# Open http://localhost:3000
+
+# 3) Build for production
+npm run build
+
+# 4) Start production server
+npm start
