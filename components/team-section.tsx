@@ -7,7 +7,7 @@ export default function TeamSection() {
     {
       name: "Brian Morrison",
       title: "CEO & Co-founder",
-      bio: "Dartmouth College; Quantitative Social Science (B.A.); ex-Goldman",
+      bio: "Dartmouth College; Quantitative Social Science (BA); ex-Goldman",
       email: "Brian@greengolfcarbon.com",
       image: "/brian.png",
     },
@@ -20,8 +20,8 @@ export default function TeamSection() {
     },
     {
       name: "Louis Moon",
-      title: "Chief of Staff",
-      bio: "Yale College; Statistics & Data Science (B.S.); ex-Product Manager",
+      title: "CoS & Co-founder",
+      bio: "Yale College; Statistics & Data Science (BS); ex-Product Manager",
       email: "Louis@greengolfcarbon.com",
       image: "/louis.png",
     },
