@@ -20,7 +20,7 @@ export default function TeamSection() {
     },
     {
       name: "Louis Moon",
-      title: "CoS & Co-founder",
+      title: "CPO & Co-founder",
       bio: "Yale College; Statistics & Data Science (BS); ex-Product Manager",
       email: "Louis@greengolfcarbon.com",
       image: "/louis.png",
