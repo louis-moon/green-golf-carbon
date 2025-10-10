@@ -67,6 +67,7 @@
   },
   "devDependencies": {
     "@babel/preset-env": "^7.26.9",
+    "@netlify/plugin-nextjs": "^5.13.5",
     "@types/node": "^22.15.3",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
