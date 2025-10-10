@@ -1,6 +1,8 @@
 [build]
-  command = "npm ci --legacy-peer-deps && npm run build"
+  # regular install instead of `npm ci`
+  command = "npm install --no-audit --no-fund --legacy-peer-deps && npm run build"
   publish = ".next"
 
 [build.environment]
-  NODE_VERSION = "20" # or 22, both fine for Next 15
+  NODE_VERSION = "20"
+  NPM_VERSION = "10.9.1"
