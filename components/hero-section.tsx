@@ -1,5 +1,4 @@
-// File: components/hero-section.tsx
-
+// components/hero-section.tsx
 "use client"
 
 import Image from "next/image"
@@ -8,14 +7,15 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="w-full bg-gradient-to-br from-emerald-900 to-emerald-700 text-white"
+      // brand gradient: deep brown -> primary green
+      className="w-full bg-gradient-to-br from-brand-darker to-primary text-primary-foreground"
     >
       <div className="container mx-auto px-4 py-20 md:py-32 flex flex-col items-center">
         <div className="max-w-4xl mx-auto text-center mb-12">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Improving Soil Quality & Capturing Atmospheric CO<sub>2</sub>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-emerald-100">
+          <p className="text-xl md:text-2xl mb-8 text-secondary-foreground/80">
             Green Golf Carbon transforms golf courses and managed turf into carbon
             sinks through innovative basalt-enhanced sand technology.
           </p>
@@ -25,9 +25,8 @@ export default function HeroSection() {
           <Image
             src="/cover.jpg?height=800&width=1200"
             alt="Golf course with Green Golf Carbon technology"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg"
+            fill
+            className="object-cover rounded-lg"
           />
         </div>
       </div>

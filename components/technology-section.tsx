@@ -62,19 +62,19 @@ export default function TechnologySection() {
             </p>
             <ul className="space-y-4">
               <li className="flex items-start">
-                <span className="bg-emerald-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                <span className="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                   ✓
                 </span>
                 <span>Fastest scale, most co-benefits & permanence at half the cost of Direct Air Capture</span>
               </li>
               <li className="flex items-start">
-                <span className="bg-emerald-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                <span className="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                   ✓
                 </span>
                 <span>1,000+ years of carbon storage durability</span>
               </li>
               <li className="flex items-start">
-                <span className="bg-emerald-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                <span className="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                   ✓
                 </span>
                 <span>Improves soil fertility, turf productivity & vitality</span>

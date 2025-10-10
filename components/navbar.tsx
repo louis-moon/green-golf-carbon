@@ -13,13 +13,9 @@ export default function Navbar() {
   const toggleMenu = () => setIsMenuOpen((v) => !v)
 
   const scrollToSection = (id: string) => {
-    // Close mobile menu after navigating
     setIsMenuOpen(false)
-
     const el = document.getElementById(id)
     if (!el) return
-
-    // offset for fixed header
     const HEADER_OFFSET = 80
     const y = el.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET
     window.scrollTo({ top: y, behavior: "smooth" })
@@ -30,60 +26,36 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-2">
-            <Image
-              src="/logo.png"
-              alt="Green Golf Carbon"
-              width={40}
-              height={40}
-              priority
-            />
-            <span className="text-2xl font-bold text-emerald-700">
+            <Image src="/logo.png" alt="Green Golf Carbon" width={40} height={40} priority />
+            {/* brand title now uses your semantic primary */}
+            <span className="text-2xl font-bold text-primary">
               Green Golf Carbon
             </span>
           </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-8">
-            <button
-              onClick={() => scrollToSection("hero")}
-              className="text-gray-700 hover:text-emerald-600 font-medium"
-            >
+            <button onClick={() => scrollToSection("hero")} className="text-foreground/80 hover:text-primary font-medium">
               Home
             </button>
-            <button
-              onClick={() => scrollToSection("benefits")}
-              className="text-gray-700 hover:text-emerald-600 font-medium"
-            >
+            <button onClick={() => scrollToSection("benefits")} className="text-foreground/80 hover:text-primary font-medium">
               Benefits
             </button>
-            <button
-              onClick={() => scrollToSection("technology")}
-              className="text-gray-700 hover:text-emerald-600 font-medium"
-            >
+            <button onClick={() => scrollToSection("technology")} className="text-foreground/80 hover:text-primary font-medium">
               How It Works
             </button>
-            <button
-              onClick={() => scrollToSection("team")}
-              className="text-gray-700 hover:text-emerald-600 font-medium"
-            >
+            <button onClick={() => scrollToSection("team")} className="text-foreground/80 hover:text-primary font-medium">
               Team
             </button>
+            {/* shadcn Button already reads from --primary */}
             <Button variant="default" onClick={() => scrollToSection("contact")}>
               Get Started
             </Button>
           </nav>
 
           {/* Mobile Toggle */}
-          <button
-            className="md:hidden p-2 rounded hover:bg-gray-100"
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? (
-              <X className="h-6 w-6 text-gray-700" />
-            ) : (
-              <Menu className="h-6 w-6 text-gray-700" />
-            )}
+          <button className="md:hidden p-2 rounded hover:bg-muted" onClick={toggleMenu} aria-label="Toggle menu">
+            {isMenuOpen ? <X className="h-6 w-6 text-foreground" /> : <Menu className="h-6 w-6 text-foreground" />}
           </button>
         </div>
       </div>
@@ -92,36 +64,19 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t">
           <div className="container mx-auto px-4 py-4 space-y-4">
-            <button
-              onClick={() => scrollToSection("hero")}
-              className="block text-gray-700 hover:text-emerald-600 font-medium py-2 w-full text-left"
-            >
+            <button onClick={() => scrollToSection("hero")} className="block text-foreground/80 hover:text-primary font-medium py-2 w-full text-left">
               Home
             </button>
-            <button
-              onClick={() => scrollToSection("benefits")}
-              className="block text-gray-700 hover:text-emerald-600 font-medium py-2 w-full text-left"
-            >
+            <button onClick={() => scrollToSection("benefits")} className="block text-foreground/80 hover:text-primary font-medium py-2 w-full text-left">
               Benefits
             </button>
-            <button
-              onClick={() => scrollToSection("technology")}
-              className="block text-gray-700 hover:text-emerald-600 font-medium py-2 w-full text-left"
-            >
+            <button onClick={() => scrollToSection("technology")} className="block text-foreground/80 hover:text-primary font-medium py-2 w-full text-left">
               How It Works
             </button>
-            <button
-              onClick={() => scrollToSection("team")}
-              className="block text-gray-700 hover:text-emerald-600 font-medium py-2 w-full text-left"
-            >
+            <button onClick={() => scrollToSection("team")} className="block text-foreground/80 hover:text-primary font-medium py-2 w-full text-left">
               Team
             </button>
-            <Button
-              variant="default"
-              size="default"
-              className="w-full"
-              onClick={() => scrollToSection("contact")}
-            >
+            <Button variant="default" size="default" className="w-full" onClick={() => scrollToSection("contact")}>
               Get Started
             </Button>
           </div>

@@ -11,13 +11,17 @@ const config = {
   ],
   prefix: "",
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
+  extend: {
+    colors: {
+      brand: {
+        light: "#8BC34A",
+        DEFAULT: "#4CAF50",
+        dark: "#3B2A22",
+        darker: "#1E120C",
       },
     },
+  },
+},
     extend: {
       colors: {
         border: "hsl(var(--border))",

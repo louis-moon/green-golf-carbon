@@ -33,7 +33,7 @@ export default function ComparisonTable() {
                   <XCircle className="h-5 w-5 text-red-500 mx-auto" />
                 </TableCell>
                 <TableCell className="text-center">
-                  <CheckCircle className="h-5 w-5 text-emerald-500 mx-auto" />
+                  <CheckCircle className="h-5 w-5 text-primary mx-auto" />
                 </TableCell>
               </TableRow>
               <TableRow>
@@ -42,7 +42,7 @@ export default function ComparisonTable() {
                   <XCircle className="h-5 w-5 text-red-500 mx-auto" />
                 </TableCell>
                 <TableCell className="text-center">
-                  <CheckCircle className="h-5 w-5 text-emerald-500 mx-auto" />
+                  <CheckCircle className="h-5 w-5 text-primary mx-auto" />
                 </TableCell>
               </TableRow>
               <TableRow>
