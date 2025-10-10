@@ -31,7 +31,7 @@ export default function FeatureSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">Green Sand Advantage</h2>
-          <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+          <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-2">
             Our enhanced basalt blend delivers multiple benefits over traditional quartz sand, improving turf quality
             while capturing carbon.
           </p>

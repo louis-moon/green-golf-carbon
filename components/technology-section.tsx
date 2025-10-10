@@ -40,13 +40,13 @@ export default function TechnologySection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">How Our Technology Works</h2>
-          <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+          <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-2">
             Integrating Basalt Blends into Routine Turf Maintenance for Seamless Carbon Capture
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-16">
-          <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl order-2 md:order-1">
+          <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl">
             <Image
               src="/erw.jpg"
               alt="Enhanced Rock Weathering Process"
@@ -54,7 +54,7 @@ export default function TechnologySection() {
               className="object-cover"
             />
           </div>
-          <div className="order-1 md:order-2 px-2">
+          <div className="px-2">
             <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Enhanced Rock Weathering (ERW)</h3>
             <p className="text-base md:text-lg mb-4 md:mb-6">
               Enhanced Rock Weathering is a natural process that we accelerate to capture CO2 from the atmosphere and
@@ -62,19 +62,19 @@ export default function TechnologySection() {
             </p>
             <ul className="space-y-3 md:space-y-4">
               <li className="flex items-start">
-                <span className="bg-[#4CAF50] text-white rounded-full min-w-[24px] w-6 h-6 flex items-center justify-center mr-3 mt-0.5 text-sm">
+                <span className="bg-[#4CAF50] text-white rounded-full min-w-[24px] w-6 h-6 flex items-center justify-center mr-3 mt-0.5 text-sm flex-shrink-0">
                   ✓
                 </span>
                 <span className="text-sm md:text-base">Fastest scale, most co-benefits & permanence at half the cost of Direct Air Capture</span>
               </li>
               <li className="flex items-start">
-                <span className="bg-[#4CAF50] text-white rounded-full min-w-[24px] w-6 h-6 flex items-center justify-center mr-3 mt-0.5 text-sm">
+                <span className="bg-[#4CAF50] text-white rounded-full min-w-[24px] w-6 h-6 flex items-center justify-center mr-3 mt-0.5 text-sm flex-shrink-0">
                   ✓
                 </span>
                 <span className="text-sm md:text-base">1,000+ years of carbon storage durability</span>
               </li>
               <li className="flex items-start">
-                <span className="bg-[#4CAF50] text-white rounded-full min-w-[24px] w-6 h-6 flex items-center justify-center mr-3 mt-0.5 text-sm">
+                <span className="bg-[#4CAF50] text-white rounded-full min-w-[24px] w-6 h-6 flex items-center justify-center mr-3 mt-0.5 text-sm flex-shrink-0">
                   ✓
                 </span>
                 <span className="text-sm md:text-base">Improves soil fertility, turf productivity & vitality</span>

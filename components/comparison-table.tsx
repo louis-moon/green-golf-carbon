@@ -7,16 +7,16 @@ export default function ComparisonTable() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">Traditional Sand vs. Green Sand</h2>
-          <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+          <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-2">
             See how our enhanced basalt blend compares to traditional quartz sand used in golf courses.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto overflow-x-auto -mx-4 px-4">
+        <div className="max-w-4xl mx-auto overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
           <Table className="min-w-[600px]">
             <TableHeader>
               <TableRow>
-                <TableHead className="w-[200px] md:w-[300px] text-xs md:text-sm">Feature</TableHead>
+                <TableHead className="w-[180px] sm:w-[220px] md:w-[300px] text-xs md:text-sm">Feature</TableHead>
                 <TableHead className="text-center text-xs md:text-sm">Traditional Quartz Sand</TableHead>
                 <TableHead className="text-center text-xs md:text-sm">Green Golf Carbon Sand</TableHead>
               </TableRow>
