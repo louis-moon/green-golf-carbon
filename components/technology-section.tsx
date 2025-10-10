@@ -62,7 +62,7 @@ export default function TechnologySection() {
             </p>
             <ul className="space-y-4">
               <li className="flex items-start">
-                <span className="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                <span className="bg-brand-DEFAULT text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                   ✓
                 </span>
                 <span>Fastest scale, most co-benefits & permanence at half the cost of Direct Air Capture</span>
@@ -87,7 +87,7 @@ export default function TechnologySection() {
           {steps.map((step, index) => (
             <Card key={index} className="border-none shadow-md hover:shadow-lg transition-shadow">
               <CardContent className="p-6 flex items-start">
-                <div className="bg-emerald-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">
+                <div className="bg-brand-DEFAULT text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">
                   {step.number}
                 </div>
                 <div>

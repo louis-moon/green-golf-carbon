@@ -34,7 +34,7 @@ export default function ContactSection() {
 
         {state?.success ? (
           <Alert variant="default" className="flex items-center">
-            <CheckCircle className="h-5 w-5 mr-2 text-emerald-600" />
+            <CheckCircle className="h-5 w-5 mr-2 text-brand-DEFAULT" />
             <AlertDescription>Thanks for reaching out — we’ll be in touch shortly!</AlertDescription>
           </Alert>
         ) : (
