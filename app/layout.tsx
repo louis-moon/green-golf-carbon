@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      {/* Reserve space for fixed header (h-20 = 80px) + iOS safe area */}
-      <body className="pt-20 md:pt-20 [padding-top:calc(env(safe-area-inset-top)+80px)]">
+      {/* Reserve space for the fixed header (80px) + iOS safe area. Use ONLY one padding rule */}
+      <body className="[padding-top:calc(env(safe-area-inset-top)+80px)]">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <ClientOnlyNavbar />
           {children}
