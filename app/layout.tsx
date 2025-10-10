@@ -6,23 +6,21 @@ import ClientOnlyNavbar from "@/components/ClientOnlyNavbar";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Green Golf Carbon | Improving Soil Quality & Capturing CO2",
-  description:
-    "Green Golf Carbon transforms golf courses and managed turf into carbon sinks through innovative basalt-enhanced sand technology.",
-  icons: {
-    icon: "/logo.png",        // or better: a 32x32/48x48 PNG
-    shortcut: "/logo.png",
-    apple: "/logo.png",       // ideally 180x180 PNG for iOS
-  },
+  title: "Green Golf Carbon",
+  description: "Sustainable golf — carbon-neutral platform",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <ClientOnlyNavbar />
-          <div className="pt-20">{children}</div>
+          {children}
           <Footer />
         </ThemeProvider>
       </body>
