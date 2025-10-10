@@ -13,9 +13,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      {/* Reserve space for the fixed header (80px) + iOS safe area. Use ONLY one padding rule */}
-      <body className="[padding-top:calc(env(safe-area-inset-top)+80px)]">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      {/* Reserve space for the fixed header (80px) + iOS safe area */}
+      <body className="[padding-top:calc(env(safe-area-inset-top)+80px)] min-h-screen bg-background text-foreground antialiased">
+        {/* Lock to light theme so mobile = desktop */}
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <ClientOnlyNavbar />
           {children}
           <Footer />

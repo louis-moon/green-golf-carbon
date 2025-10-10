@@ -27,17 +27,17 @@
     --input: 25 25% 85%;
     --ring: 122 39% 49%;
     --radius: 0.5rem;
-  }
+  }/*
   .dark {
-    --background: 20 15% 7%; /* dark brown background */
+    --background: 20 15% 7%;
     --foreground: 0 0% 98%;
     --card: 25 15% 10%;
     --card-foreground: 0 0% 98%;
     --popover: 25 15% 10%;
     --popover-foreground: 0 0% 98%;
-    --primary: 88 54% 54%; /* light green accent */
+    --primary: 88 54% 54%;
     --primary-foreground: 25 15% 10%;
-    --secondary: 122 39% 49%; /* deep green for dark mode */
+    --secondary: 122 39% 49%;
     --secondary-foreground: 0 0% 98%;
     --muted: 25 15% 20%;
     --muted-foreground: 0 0% 70%;
@@ -46,5 +46,5 @@
     --border: 25 15% 20%;
     --input: 25 15% 25%;
     --ring: 88 54% 54%;
-  }
+  }*/
 }
