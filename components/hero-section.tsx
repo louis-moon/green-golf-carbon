@@ -19,14 +19,13 @@ export default function HeroSection() {
           </p>
         </div>
 
-        <div className="relative w-full max-w-5xl aspect-video rounded-lg overflow-hidden shadow-2xl">
+        <div className="relative w-full max-w-5xl h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-2xl">
           <Image
-            src="/cover.jpg"
+            src="/cover.jpg?height=800&width=1200"
             alt="Golf course with Green Golf Carbon technology"
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
-            className="object-cover"
-            priority
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg"
           />
         </div>
       </div>
