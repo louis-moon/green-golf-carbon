@@ -1,20 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 25 25% 10%; /* dark brown text */
-
     --card: 0 0% 100%;
     --card-foreground: 25 25% 10%;
-
     --popover: 0 0% 100%;
     --popover-foreground: 25 25% 10%;
-
     /* Brand Colors */
     --primary: 122 39% 49%; /* deep green #4CAF50 */
     --primary-foreground: 0 0% 98%;
     --secondary: 88 54% 54%; /* light green #8BC34A */
     --secondary-foreground: 25 25% 10%;
-
     /* Supporting Colors */
     --muted: 30 15% 90%;
     --muted-foreground: 25 25% 35%;
@@ -22,37 +22,27 @@
     --accent-foreground: 0 0% 98%;
     --destructive: 0 72% 45%;
     --destructive-foreground: 0 0% 98%;
-
     /* Surfaces & UI */
     --border: 25 25% 80%;
     --input: 25 25% 85%;
     --ring: 122 39% 49%;
-
     --radius: 0.5rem;
   }
-
   .dark {
     --background: 20 15% 7%; /* dark brown background */
     --foreground: 0 0% 98%;
-
     --card: 25 15% 10%;
     --card-foreground: 0 0% 98%;
-
     --popover: 25 15% 10%;
     --popover-foreground: 0 0% 98%;
-
     --primary: 88 54% 54%; /* light green accent */
     --primary-foreground: 25 15% 10%;
-
     --secondary: 122 39% 49%; /* deep green for dark mode */
     --secondary-foreground: 0 0% 98%;
-
     --muted: 25 15% 20%;
     --muted-foreground: 0 0% 70%;
-
     --accent: 88 54% 54%;
     --accent-foreground: 25 15% 10%;
-
     --border: 25 15% 20%;
     --input: 25 15% 25%;
     --ring: 88 54% 54%;

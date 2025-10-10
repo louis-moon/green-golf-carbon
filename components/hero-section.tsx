@@ -7,12 +7,11 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      // brand gradient: deep brown -> primary green
-      className="w-full bg-gradient-to-br from-brand-dark to-brand-DEFAULT text-white"
+      className="w-full bg-gradient-to-br from-[#3B2A22] to-[#4CAF50] text-white"
     >
       <div className="container mx-auto px-4 py-12 md:py-20 lg:py-32 flex flex-col items-center">
         <div className="max-w-4xl mx-auto text-center mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6">
             Improving Soil Quality & Capturing Atmospheric CO<sub>2</sub>
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl mb-8 text-white/90">

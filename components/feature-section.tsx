@@ -4,23 +4,23 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 export default function FeatureSection() {
   const features = [
     {
-      icon: <Mountain className="h-12 w-12 text-emerald-600" />,
+      icon: <Mountain className="h-12 w-12 text-[#4CAF50]" />,
       title: "Optimized Basalt Blend",
       description:
         "Our proprietary basalt blend actively captures CO2 while improving soil quality for healthier turf.",
     },
     {
-      icon: <Droplets className="h-12 w-12 text-emerald-600" />,
+      icon: <Droplets className="h-12 w-12 text-[#4CAF50]" />,
       title: "Improved Water Retention",
       description: "Reduce water usage by enhancing soil's ability to retain moisture, creating more resilient turf.",
     },
     {
-      icon: <BarChart2 className="h-12 w-12 text-emerald-600" />,
+      icon: <BarChart2 className="h-12 w-12 text-[#4CAF50]" />,
       title: "Carbon Credit Generation",
       description: "Generate high-quality carbon credits that add value to your facility's sustainability efforts.",
     },
     {
-      icon: <Award className="h-12 w-12 text-emerald-600" />,
+      icon: <Award className="h-12 w-12 text-[#4CAF50]" />,
       title: "Seamless Integration",
       description: "Our solution works with your existing maintenance equipment and procedures.",
     },
