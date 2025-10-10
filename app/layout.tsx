@@ -10,14 +10,11 @@ export const metadata: Metadata = {
   description: "Sustainable golf — carbon-neutral platform",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      {/* Reserve space for fixed header (h-20 = 80px) + iOS safe area */}
+      <body className="pt-20 md:pt-20 [padding-top:calc(env(safe-area-inset-top)+80px)]">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <ClientOnlyNavbar />
           {children}

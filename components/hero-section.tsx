@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import Image from "next/image"
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
@@ -23,12 +23,13 @@ export default function HeroSection() {
           <Image
             src="/cover.jpg?height=800&width=1200"
             alt="Golf course with Green Golf Carbon technology"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg"
+            fill
+            sizes="(max-width: 768px) 100vw, 1000px"
+            priority
+            className="object-cover rounded-lg"
           />
         </div>
       </div>
     </section>
-  )
+  );
 }
