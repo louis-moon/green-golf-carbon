@@ -12,10 +12,11 @@ body {
   }
 }
 
+/* ---------- THEME TOKENS (brand greens + browns) ---------- */
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 25 25% 10%; /* dark brown text */
+    --foreground: 25 25% 10%;
 
     --card: 0 0% 100%;
     --card-foreground: 25 25% 10%;
@@ -23,42 +24,55 @@ body {
     --popover: 0 0% 100%;
     --popover-foreground: 25 25% 10%;
 
-    /* Brand Colors */
-    --primary: 122 39% 49%; /* deep green #4CAF50 */
+    /* brand colors */
+    --primary: 122 39% 49%;              /* #4CAF50 */
     --primary-foreground: 0 0% 98%;
-    --secondary: 88 54% 54%; /* light green #8BC34A */
+
+    --secondary: 88 54% 54%;             /* #8BC34A */
     --secondary-foreground: 25 25% 10%;
 
-    /* Supporting Colors */
+    /* support */
     --muted: 30 15% 90%;
     --muted-foreground: 25 25% 35%;
+
     --accent: 122 39% 49%;
     --accent-foreground: 0 0% 98%;
+
     --destructive: 0 72% 45%;
     --destructive-foreground: 0 0% 98%;
 
-    /* Surfaces & UI */
     --border: 25 25% 80%;
     --input: 25 25% 85%;
     --ring: 122 39% 49%;
 
     --radius: 0.5rem;
+
+    /* optional sidebar tokens shadcn uses */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 20 15% 7%; /* dark brown background */
+    --background: 20 15% 7%;
     --foreground: 0 0% 98%;
 
-    --card: 25 15% 10%;
+    --card: 20 15% 10%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 25 15% 10%;
+    --popover: 20 15% 10%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 88 54% 54%; /* light green accent */
+    /* invert brand usage for dark mode for contrast */
+    --primary: 88 54% 54%;
     --primary-foreground: 25 15% 10%;
 
-    --secondary: 122 39% 49%; /* deep green for dark mode */
+    --secondary: 122 39% 49%;
     --secondary-foreground: 0 0% 98%;
 
     --muted: 25 15% 20%;
@@ -67,12 +81,26 @@ body {
     --accent: 88 54% 54%;
     --accent-foreground: 25 15% 10%;
 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
     --border: 25 15% 20%;
     --input: 25 15% 25%;
     --ring: 88 54% 54%;
+
+    /* keep sidebar tokens aligned */
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
+/* keep these in a separate @layer block (shadcn convention) */
 @layer base {
   * {
     @apply border-border;
