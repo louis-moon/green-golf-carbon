@@ -22,7 +22,7 @@ export default function HeroSection() {
 
         <div className="relative w-full max-w-5xl h-[200px] sm:h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-2xl">
           <Image
-            src="/cover.jpg?height=800&width=1200"
+            src="/cover.jpg"
             alt="Golf course with Green Golf Carbon technology"
             fill
             className="object-cover rounded-lg"
