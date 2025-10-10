@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="w-full bg-gradient-to-br from-emerald-900 to-emerald-700 text-white"
+      className="w-full bg-gradient-to-br from-[#3B2A22] to-[#4CAF50] text-white"
     >
       <div className="container mx-auto px-4 py-20 md:py-32 flex flex-col items-center">
         <div className="max-w-4xl mx-auto text-center mb-12">
@@ -19,13 +19,14 @@ export default function HeroSection() {
           </p>
         </div>
 
-        <div className="relative w-full max-w-5xl h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-2xl">
+        <div className="relative w-full max-w-5xl aspect-video rounded-lg overflow-hidden shadow-2xl">
           <Image
             src="/cover.jpg"
             alt="Golf course with Green Golf Carbon technology"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+            className="object-cover"
+            priority
           />
         </div>
       </div>

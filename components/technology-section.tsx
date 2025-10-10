@@ -45,12 +45,13 @@ export default function TechnologySection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-          <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+          <div className="relative w-full aspect-square md:aspect-auto md:h-[400px] rounded-lg overflow-hidden shadow-xl">
             <Image
               src="/erw.jpg"
               alt="Enhanced Rock Weathering Process"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
@@ -62,19 +63,19 @@ export default function TechnologySection() {
             </p>
             <ul className="space-y-4">
               <li className="flex items-start">
-                <span className="bg-emerald-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                <span className="bg-[#4CAF50] text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 shrink-0">
                   ✓
                 </span>
                 <span>Fastest scale, most co-benefits & permanence at half the cost of Direct Air Capture</span>
               </li>
               <li className="flex items-start">
-                <span className="bg-emerald-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                <span className="bg-[#4CAF50] text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 shrink-0">
                   ✓
                 </span>
                 <span>1,000+ years of carbon storage durability</span>
               </li>
               <li className="flex items-start">
-                <span className="bg-emerald-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                <span className="bg-[#4CAF50] text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 shrink-0">
                   ✓
                 </span>
                 <span>Improves soil fertility, turf productivity & vitality</span>
@@ -87,10 +88,10 @@ export default function TechnologySection() {
           {steps.map((step, index) => (
             <Card key={index} className="border-none shadow-md hover:shadow-lg transition-shadow">
               <CardContent className="p-6 flex items-start">
-                <div className="bg-emerald-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">
+                <div className="bg-[#4CAF50] text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 shrink-0">
                   {step.number}
                 </div>
-                <div>
+                <div className="min-w-0">
                   <h4 className="text-xl font-semibold mb-2">{step.title}</h4>
                   <p className="text-gray-600">{step.description}</p>
                 </div>
