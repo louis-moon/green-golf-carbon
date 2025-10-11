@@ -1,7 +1,7 @@
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { CheckCircle, XCircle } from "lucide-react"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { CheckCircle, XCircle } from "lucide-react";
 
-export default function ComparisonTable() {
+export default function ComparisonTable(): JSX.Element {
   return (
     <section className="w-full py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -24,9 +24,14 @@ export default function ComparisonTable() {
             <TableBody>
               <TableRow>
                 <TableCell className="font-medium text-black">Composition</TableCell>
-                <TableCell className="text-center text-foreground">Standard quartz sand—inert, non-reactive</TableCell>
-                <TableCell className="text-center text-foreground">Optimized basalt blend that actively captures CO2</TableCell>
+                <TableCell className="text-center text-foreground">
+                  Standard quartz sand—inert, non-reactive
+                </TableCell>
+                <TableCell className="text-center text-foreground">
+                  Optimized basalt blend that actively captures CO2
+                </TableCell>
               </TableRow>
+
               <TableRow>
                 <TableCell className="font-medium text-black">Soil Health Benefits</TableCell>
                 <TableCell className="text-center text-foreground">
@@ -36,6 +41,7 @@ export default function ComparisonTable() {
                   <CheckCircle className="h-5 w-5 text-[#4CAF50] mx-auto" />
                 </TableCell>
               </TableRow>
+
               <TableRow>
                 <TableCell className="font-medium text-black">Carbon Capture</TableCell>
                 <TableCell className="text-center text-foreground">
@@ -45,21 +51,25 @@ export default function ComparisonTable() {
                   <CheckCircle className="h-5 w-5 text-[#4CAF50] mx-auto" />
                 </TableCell>
               </TableRow>
+
               <TableRow>
                 <TableCell className="font-medium text-black">Water Retention</TableCell>
                 <TableCell className="text-center text-foreground">Limited</TableCell>
                 <TableCell className="text-center text-foreground">Significantly improved</TableCell>
-              </Row>
+              </TableRow>
+
               <TableRow>
                 <TableCell className="font-medium text-black">Fertilizer Requirements</TableCell>
                 <TableCell className="text-center text-foreground">Standard</TableCell>
                 <TableCell className="text-center text-foreground">Reduced</TableCell>
               </TableRow>
+
               <TableRow>
                 <TableCell className="font-medium text-black">Turf Durability</TableCell>
                 <TableCell className="text-center text-foreground">Standard</TableCell>
                 <TableCell className="text-center text-foreground">Enhanced</TableCell>
               </TableRow>
+
               <TableRow>
                 <TableCell className="font-medium text-black">Carbon Credit Potential</TableCell>
                 <TableCell className="text-center text-foreground">None</TableCell>
@@ -70,5 +80,5 @@ export default function ComparisonTable() {
         </div>
       </div>
     </section>
-  )
+  );
 }
