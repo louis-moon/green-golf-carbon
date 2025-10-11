@@ -1,16 +1,13 @@
-"use server"
-
+// app/actions.ts
 import { z } from "zod"
 import { Resend } from "resend"
-
-const resend = new Resend(process.env.RESEND_API_KEY)
 
 const ContactFormSchema = z.object({
   name: z.string().min(1, "Name is required"),
   email: z.string().email("Invalid email address"),
   facility: z.string().min(1, "Facility type is required"),
   message: z.string().min(10, "Message must be at least 10 characters"),
-  // honeypot (should be empty)
+  // Honeypot (leave blank)
   company: z.string().optional(),
 })
 
@@ -29,13 +26,15 @@ export async function submitContactForm(
   prevState: ContactFormState,
   formData: FormData
 ): Promise<ContactFormState> {
+  "use server" // <-- put the directive here, not at the top of the module
+
   // Validate
   const parsed = ContactFormSchema.safeParse({
     name: formData.get("name"),
     email: formData.get("email"),
     facility: formData.get("facility"),
     message: formData.get("message"),
-    company: formData.get("company"), // honeypot
+    company: formData.get("company"),
   })
 
   if (!parsed.success) {
@@ -44,21 +43,28 @@ export async function submitContactForm(
 
   const { name, email, facility, message, company } = parsed.data
 
-  // Honeypot: if filled, silently accept but do nothing
-  if (company && company.trim().length > 0) {
+  // Honeypot trip: pretend success
+  if (company && company.trim()) {
     return { success: true }
   }
 
-  // Compose email
-  const from = process.env.CONTACT_FROM!
-  const to = process.env.CONTACT_TO!
+  const RESEND_API_KEY = process.env.RESEND_API_KEY
+  const CONTACT_FROM = process.env.CONTACT_FROM
+  const CONTACT_TO = process.env.CONTACT_TO
+
+  if (!RESEND_API_KEY || !CONTACT_FROM || !CONTACT_TO) {
+    console.error("Missing envs: RESEND_API_KEY/CONTACT_FROM/CONTACT_TO")
+    return { errors: { _form: ["Server is misconfigured. Please try again later."] }, success: false }
+  }
+
+  const resend = new Resend(RESEND_API_KEY)
 
   const subject = `Contact — ${name} (${facility})`
   const text = [
     `Name: ${name}`,
     `Email: ${email}`,
     `Facility: ${facility}`,
-    ``,
+    "",
     message,
   ].join("\n")
 
@@ -73,25 +79,20 @@ export async function submitContactForm(
 
   try {
     await resend.emails.send({
-      from,
-      to,
+      from: CONTACT_FROM,
+      to: CONTACT_TO,
       subject,
       text,
       html,
-      reply_to: email, // lets you reply directly to the sender
+      reply_to: email,
     })
-
     return { success: true }
-  } catch (err: any) {
+  } catch (err) {
     console.error("Resend error:", err)
-    return {
-      errors: { _form: ["Failed to send message. Please try again."] },
-      success: false,
-    }
+    return { errors: { _form: ["Failed to send message. Please try again."] }, success: false }
   }
 }
 
-// tiny, safe HTML escaper
 function escapeHtml(s: string) {
   return s
     .replace(/&/g, "&amp;")
