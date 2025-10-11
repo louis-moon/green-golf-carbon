@@ -39,6 +39,13 @@ export default function ContactSection() {
           </Alert>
         ) : (
           <form action={formAction} className="space-y-4">
+            <input
+              type="text"
+              name="company"
+              tabIndex={-1}
+              autoComplete="off"
+              className="hidden"
+            />
             <div>
               <Input name="name" placeholder="Name" />
               {state?.errors?.name && <p className="text-sm text-red-600 mt-1">{state.errors.name[0]}</p>}
