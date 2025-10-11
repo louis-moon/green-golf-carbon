@@ -32,7 +32,7 @@ export default function TeamSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Meet Our Team</h2>
-          <p className="text-xl text-brand-dark max-w-3xl mx-auto">
+          <p className="text-xl text-foreground max-w-3xl mx-auto">
             The people behind Green Golf Carbon making grass greener and our planet healthier.
           </p>
         </div>
@@ -51,10 +51,10 @@ export default function TeamSection() {
               </div>
               <CardHeader>
                 <CardTitle className="text-black">{member.name}</CardTitle>
-                <CardDescription className="text-brand-dark">{member.title}</CardDescription>
+                <CardDescription className="text-foreground">{member.title}</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-brand-dark">{member.bio}</p>
+                <p className="text-foreground">{member.bio}</p>
               </CardContent>
               <CardFooter className="flex justify-start gap-4">
                 <a
