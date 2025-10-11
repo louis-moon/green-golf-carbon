@@ -39,8 +39,8 @@ export default function TechnologySection() {
     <section id="technology" className="w-full py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">How Our Technology Works</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">How Our Technology Works</h2>
+          <p className="text-xl text-brand-dark max-w-3xl mx-auto">
             Integrating Basalt Blends into Routine Turf Maintenance for Seamless Carbon Capture
           </p>
         </div>
@@ -55,8 +55,8 @@ export default function TechnologySection() {
             />
           </div>
           <div>
-            <h3 className="text-2xl font-bold mb-4">Enhanced Rock Weathering (ERW)</h3>
-            <p className="text-lg mb-6">
+            <h3 className="text-2xl font-bold mb-4 text-black">Enhanced Rock Weathering (ERW)</h3>
+            <p className="text-lg mb-6 text-brand-dark">
               Enhanced Rock Weathering is a natural process that we accelerate to capture CO2 from the atmosphere and
               lock it away permanently as stable carbonates in the soil.
             </p>
@@ -65,19 +65,19 @@ export default function TechnologySection() {
                 <span className="bg-[#4CAF50] text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                   ✓
                 </span>
-                <span>Fastest scale, most co-benefits & permanence at half the cost of Direct Air Capture</span>
+                <span className="text-brand-dark">Fastest scale, most co-benefits & permanence at half the cost of Direct Air Capture</span>
               </li>
               <li className="flex items-start">
                 <span className="bg-[#4CAF50] text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                   ✓
                 </span>
-                <span>1,000+ years of carbon storage durability</span>
+                <span className="text-brand-dark">1,000+ years of carbon storage durability</span>
               </li>
               <li className="flex items-start">
                 <span className="bg-[#4CAF50] text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                   ✓
                 </span>
-                <span>Improves soil fertility, turf productivity & vitality</span>
+                <span className="text-brand-dark">Improves soil fertility, turf productivity & vitality</span>
               </li>
             </ul>
           </div>
@@ -91,8 +91,8 @@ export default function TechnologySection() {
                   {step.number}
                 </div>
                 <div>
-                  <h4 className="text-xl font-semibold mb-2">{step.title}</h4>
-                  <p className="text-gray-600">{step.description}</p>
+                  <h4 className="text-xl font-semibold mb-2 text-black">{step.title}</h4>
+                  <p className="text-brand-dark">{step.description}</p>
                 </div>
               </CardContent>
             </Card>

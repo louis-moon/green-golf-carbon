@@ -30,8 +30,8 @@ export default function FeatureSection() {
     <section id="benefits" className="w-full py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Green Sand Advantage</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Green Sand Advantage</h2>
+          <p className="text-xl text-brand-dark max-w-3xl mx-auto">
             Our enhanced basalt blend delivers multiple benefits over traditional quartz sand, improving turf quality
             while capturing carbon.
           </p>
@@ -42,8 +42,8 @@ export default function FeatureSection() {
             <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader className="pb-2 flex justify-center">{feature.icon}</CardHeader>
               <CardContent className="text-center">
-                <CardTitle className="mb-2 text-xl">{feature.title}</CardTitle>
-                <CardDescription className="text-base">{feature.description}</CardDescription>
+                <CardTitle className="mb-2 text-xl text-black">{feature.title}</CardTitle>
+                <CardDescription className="text-base text-brand-dark">{feature.description}</CardDescription>
               </CardContent>
             </Card>
           ))}

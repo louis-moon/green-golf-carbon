@@ -6,8 +6,8 @@ export default function ComparisonTable() {
     <section className="w-full py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Traditional Sand vs. Green Sand</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Traditional Sand vs. Green Sand</h2>
+          <p className="text-xl text-brand-dark max-w-3xl mx-auto">
             See how our enhanced basalt blend compares to traditional quartz sand used in golf courses.
           </p>
         </div>
@@ -16,54 +16,54 @@ export default function ComparisonTable() {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead className="w-[300px]">Feature</TableHead>
-                <TableHead className="text-center">Traditional Quartz Sand</TableHead>
-                <TableHead className="text-center">Green Golf Carbon Sand</TableHead>
+                <TableHead className="w-[300px] text-black">Feature</TableHead>
+                <TableHead className="text-center text-black">Traditional Quartz Sand</TableHead>
+                <TableHead className="text-center text-black">Green Golf Carbon Sand</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
               <TableRow>
-                <TableCell className="font-medium">Composition</TableCell>
-                <TableCell className="text-center">Standard quartz sand—inert, non-reactive</TableCell>
-                <TableCell className="text-center">Optimized basalt blend that actively captures CO2</TableCell>
+                <TableCell className="font-medium text-black">Composition</TableCell>
+                <TableCell className="text-center text-brand-dark">Standard quartz sand—inert, non-reactive</TableCell>
+                <TableCell className="text-center text-brand-dark">Optimized basalt blend that actively captures CO2</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell className="font-medium">Soil Health Benefits</TableCell>
-                <TableCell className="text-center">
+                <TableCell className="font-medium text-black">Soil Health Benefits</TableCell>
+                <TableCell className="text-center text-brand-dark">
                   <XCircle className="h-5 w-5 text-red-500 mx-auto" />
                 </TableCell>
-                <TableCell className="text-center">
+                <TableCell className="text-center text-brand-dark">
                   <CheckCircle className="h-5 w-5 text-[#4CAF50] mx-auto" />
                 </TableCell>
               </TableRow>
               <TableRow>
-                <TableCell className="font-medium">Carbon Capture</TableCell>
-                <TableCell className="text-center">
+                <TableCell className="font-medium text-black">Carbon Capture</TableCell>
+                <TableCell className="text-center text-brand-dark">
                   <XCircle className="h-5 w-5 text-red-500 mx-auto" />
                 </TableCell>
-                <TableCell className="text-center">
+                <TableCell className="text-center text-brand-dark">
                   <CheckCircle className="h-5 w-5 text-[#4CAF50] mx-auto" />
                 </TableCell>
               </TableRow>
               <TableRow>
-                <TableCell className="font-medium">Water Retention</TableCell>
-                <TableCell className="text-center">Limited</TableCell>
-                <TableCell className="text-center">Significantly improved</TableCell>
+                <TableCell className="font-medium text-black">Water Retention</TableCell>
+                <TableCell className="text-center text-brand-dark">Limited</TableCell>
+                <TableCell className="text-center text-brand-dark">Significantly improved</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell className="font-medium">Fertilizer Requirements</TableCell>
-                <TableCell className="text-center">Standard</TableCell>
-                <TableCell className="text-center">Reduced</TableCell>
+                <TableCell className="font-medium text-black">Fertilizer Requirements</TableCell>
+                <TableCell className="text-center text-brand-dark">Standard</TableCell>
+                <TableCell className="text-center text-brand-dark">Reduced</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell className="font-medium">Turf Durability</TableCell>
-                <TableCell className="text-center">Standard</TableCell>
-                <TableCell className="text-center">Enhanced</TableCell>
+                <TableCell className="font-medium text-black">Turf Durability</TableCell>
+                <TableCell className="text-center text-brand-dark">Standard</TableCell>
+                <TableCell className="text-center text-brand-dark">Enhanced</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell className="font-medium">Carbon Credit Potential</TableCell>
-                <TableCell className="text-center">None</TableCell>
-                <TableCell className="text-center">High-quality credits</TableCell>
+                <TableCell className="font-medium text-black">Carbon Credit Potential</TableCell>
+                <TableCell className="text-center text-brand-dark">None</TableCell>
+                <TableCell className="text-center text-brand-dark">High-quality credits</TableCell>
               </TableRow>
             </TableBody>
           </Table>
