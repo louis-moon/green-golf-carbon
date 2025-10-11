@@ -48,3 +48,33 @@
     --ring: 88 54% 54%;
   }*/
 }
+
+@layer utilities {
+  .animated-hero {
+    /* green → green → brown gradient, oversized so we can pan it */
+    background-image:
+      radial-gradient(1200px 600px at 20% 0%, rgba(0,0,0,0.10), rgba(0,0,0,0) 60%),
+      linear-gradient(
+        130deg,
+        hsl(var(--primary)) 0%,
+        hsl(var(--primary)) 35%,
+        #3B2A22 100% /* brand.dark */
+      );
+    background-size: 200% 200%;
+    animation: heroShift 32s ease-in-out infinite;
+    will-change: background-position;
+  }
+
+  @keyframes heroShift {
+    0%   { background-position: 0% 40%; }
+    50%  { background-position: 100% 60%; }
+    100% { background-position: 0% 40%; }
+  }
+
+  /* Accessibility: stop animation if user prefers less motion */
+  @media (prefers-reduced-motion: reduce) {
+    .animated-hero {
+      animation: none !important;
+    }
+  }
+}

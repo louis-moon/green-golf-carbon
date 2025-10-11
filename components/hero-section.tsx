@@ -6,9 +6,27 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="w-full bg-gradient-to-br from-[#3B2A22] to-[#4CAF50] text-white"
+      className="relative w-full text-white overflow-hidden"
+      aria-label="Green Golf Carbon hero"
     >
-      <div className="container mx-auto px-4 py-20 md:py-32 flex flex-col items-center">
+      {/* Animated gradient background layer */}
+      <div
+        className="absolute inset-0 animated-hero"
+        aria-hidden="true"
+      />
+
+      {/* A subtle vignette to lift text contrast over bright greens */}
+      <div
+        className="absolute inset-0"
+        aria-hidden="true"
+        style={{
+          background:
+            "radial-gradient(1200px 600px at 50% 0%, rgba(0,0,0,0.18), rgba(0,0,0,0) 60%)",
+        }}
+      />
+
+      {/* Content */}
+      <div className="relative container mx-auto px-4 py-20 md:py-32 flex flex-col items-center">
         <div className="max-w-4xl mx-auto text-center mb-12">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Improving Soil Quality & Capturing Atmospheric CO<sub>2</sub>
