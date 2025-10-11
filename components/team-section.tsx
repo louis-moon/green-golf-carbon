@@ -15,7 +15,7 @@ export default function TeamSection() {
       name: "Mukul Sharma",
       title: "CTO & Co-founder",
       bio: "Dartmouth College; Professor of Earth Sciences; Guggenheim Fellow",
-      email: "Mukul.Sharma@dartmouth.edu",
+      // email: "Mukul.Sharma@dartmouth.edu",
       image: "/mukul.png",
     },
     {
