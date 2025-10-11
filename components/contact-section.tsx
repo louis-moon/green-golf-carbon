@@ -23,7 +23,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className="w-full py-20 bg-white">
       <div className="container mx-auto px-4 max-w-xl">
-        <h2 className="text-3xl font-bold mb-6 text-center">Get In Touch</h2>
+        <h2 className="text-3xl font-bold mb-6 text-black">Get In Touch</h2>
 
         {state?.errors?._form && (
           <Alert variant="destructive" className="mb-4">

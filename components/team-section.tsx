@@ -54,7 +54,7 @@ export default function TeamSection() {
                 <CardDescription className="text-foreground">{member.title}</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-foreground">{member.bio}</p>
+                <p className="text-black">{member.bio}</p>
               </CardContent>
               <CardFooter className="flex justify-start gap-4">
                 <a
