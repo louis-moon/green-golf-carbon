@@ -11,13 +11,16 @@ export default function HeroSection() {
     >
       {/* Animated gradient background layer */}
       <div
-        className="absolute inset-0 animated-hero"
+        className="absolute inset-0 animated-hero pointer-events-none"
+        // Force the animation even if prefers-reduced-motion is set, for testing.
+        // Remove this inline style later if you want to respect user preference.
+        style={{ animation: "heroShift 12s ease-in-out infinite", backgroundSize: "300% 300%" }}
         aria-hidden="true"
       />
 
-      {/* A subtle vignette to lift text contrast over bright greens */}
+      {/* Subtle vignette for contrast */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 pointer-events-none"
         aria-hidden="true"
         style={{
           background:
