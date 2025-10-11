@@ -34,7 +34,7 @@ export default function TeamSection() {
     <section id="team" className="w-full py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our Team</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Meet Our Team</h2>
           <p className="text-xl text-foreground max-w-3xl mx-auto">
             The people behind Green Golf Carbon making grass greener and our planet healthier.
           </p>
