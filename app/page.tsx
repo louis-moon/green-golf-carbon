@@ -6,7 +6,7 @@ import TechnologySection from "@/components/technology-section"
 import ComparisonTable from "@/components/comparison-table"
 import TeamSection from "@/components/team-section"
 import SubscribeSection from "@/components/SubscribeSection"
-import ContactSection from "@/components/contact-section"
+// import ContactSection from "@/components/contact-section"
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
       <TechnologySection />
       <ComparisonTable />
       <TeamSection />
-      <ContactSection />
+      {/*<ContactSection /> */}
     </main>
   )
 }
