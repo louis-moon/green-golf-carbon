@@ -61,8 +61,6 @@ export default function Footer() {
                   info@greengolfcarbon.com
                 </a>
               </li>
-              <li>
-              </li>
             </ul>
           </div>
         </div>
