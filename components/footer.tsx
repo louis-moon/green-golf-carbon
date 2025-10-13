@@ -58,13 +58,10 @@ export default function Footer() {
               <li className="text-emerald-100">Miami, Florida</li>
               <li>
                 <a href="mailto:Louis@greengolfcarbon.com" className="text-emerald-100 hover:text-white">
-                  Louis@greengolfcarbon.com
+                  info@greengolfcarbon.com
                 </a>
               </li>
               <li>
-                <a href="tel:+7863508592" className="text-emerald-100 hover:text-white">
-                  (786) 350-8592
-                </a>
               </li>
             </ul>
           </div>

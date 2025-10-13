@@ -55,7 +55,7 @@ export default function SubscribeSection() {
           />
           <button
             type="submit"
-            className="px-4 py-2 bg-emerald-600 text-white rounded-r-md"
+            className="px-4 py-2 bg-primary text-white rounded-r-md"
           >
             Sign Up
           </button>
