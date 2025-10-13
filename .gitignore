@@ -24,4 +24,16 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
+next-env.d.ts# digest / internal tooling
+digest.py
+docs/
+data/
+config.json
+requirements.txt
+
+# misc secrets/artifacts (defense-in-depth)
+.env
+.env.*
+*.pem
+*.p12
+*.key
